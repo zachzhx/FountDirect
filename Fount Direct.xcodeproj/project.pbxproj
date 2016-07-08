@@ -22,6 +22,59 @@
 		345C83421D21B51500979061 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83411D21B51500979061 /* MeViewController.m */; };
 		345C83441D21C1ED00979061 /* chats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345C83431D21C1ED00979061 /* chats.storyboard */; };
 		345C834B1D21DAB300979061 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C834A1D21DAB300979061 /* UIColor+CustomColors.m */; };
+		345C838D1D23360C00979061 /* NSAttributedString+StringStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C838C1D23360C00979061 /* NSAttributedString+StringStyles.m */; };
+		345C83921D23367D00979061 /* SingleChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83901D23367D00979061 /* SingleChatTableViewCell.m */; };
+		345C83931D23367D00979061 /* SingleChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345C83911D23367D00979061 /* SingleChatTableViewCell.xib */; };
+		345C83A21D233DBE00979061 /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 345C839E1D233D9300979061 /* SF-UI-Text-Bold.otf */; };
+		345C83A31D233DC000979061 /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 345C839F1D233D9300979061 /* SF-UI-Text-Light.otf */; };
+		345C83A41D233DC300979061 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 345C83A01D233D9300979061 /* SF-UI-Text-Regular.otf */; };
+		345C83A51D233DC600979061 /* SF-UI-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 345C83A11D233D9300979061 /* SF-UI-Text-Semibold.otf */; };
+		345C83AA1D23683500979061 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345C83A91D23683500979061 /* Landing.storyboard */; };
+		345C83AD1D23690000979061 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83AC1D23690000979061 /* LoginViewController.m */; };
+		345C83B31D23696900979061 /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83B21D23696900979061 /* NSString+EmailValidation.m */; };
+		345C83B61D23699F00979061 /* EHFAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83B51D23699F00979061 /* EHFAuthenticator.m */; };
+		345C83BA1D2369CF00979061 /* resetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345C83B71D2369CF00979061 /* resetPassword.storyboard */; };
+		345C83BB1D2369CF00979061 /* resetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83B91D2369CF00979061 /* resetPasswordViewController.m */; };
+		345C83D81D236EA400979061 /* ServiceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83D71D236EA400979061 /* ServiceLayer.m */; };
+		345C83DC1D23771E00979061 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345C83DB1D23771E00979061 /* ShoppingCart.storyboard */; };
+		345C83DF1D23775500979061 /* ShoppingCartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83DE1D23775500979061 /* ShoppingCartTableViewController.m */; };
+		345C83E21D23777800979061 /* CheckOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83E11D23777800979061 /* CheckOutView.m */; };
+		345C83E61D23779600979061 /* ShopMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83E51D23779600979061 /* ShopMainCell.m */; };
+		345C83E91D2377A900979061 /* ShopCartHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83E81D2377A900979061 /* ShopCartHeaderCell.m */; };
+		345C83EC1D2377BB00979061 /* ShopCartFooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83EB1D2377BB00979061 /* ShopCartFooterCell.m */; };
+		345C83EF1D2377F300979061 /* EmptyShoppingCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83EE1D2377F300979061 /* EmptyShoppingCartTableViewCell.m */; };
+		345C83F41D23781F00979061 /* round-fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 345C83F01D23781F00979061 /* round-fill.png */; };
+		345C83F51D23781F00979061 /* round-fill1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 345C83F11D23781F00979061 /* round-fill1x.png */; };
+		345C83F61D23781F00979061 /* round-stoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 345C83F21D23781F00979061 /* round-stoke.png */; };
+		345C83F71D23781F00979061 /* round-stoke1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 345C83F31D23781F00979061 /* round-stoke1x.png */; };
+		345C83F91D23782E00979061 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 345C83F81D23782E00979061 /* back.png */; };
+		345C83FB1D23783600979061 /* package.png in Resources */ = {isa = PBXBuildFile; fileRef = 345C83FA1D23783600979061 /* package.png */; };
+		345C83FE1D23785F00979061 /* ShopCartProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C83FD1D23785F00979061 /* ShopCartProductModel.m */; };
+		345C84011D2378F700979061 /* CartProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84001D2378F700979061 /* CartProductModel.m */; };
+		345C84041D23792D00979061 /* CartProductMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84031D23792D00979061 /* CartProductMetaData.m */; };
+		345C84071D2379C600979061 /* UIView+CustomStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84061D2379C600979061 /* UIView+CustomStyles.m */; };
+		345C840A1D237A2900979061 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84091D237A2900979061 /* Product.m */; };
+		345C840D1D237A5000979061 /* ShoppingCartProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C840C1D237A5000979061 /* ShoppingCartProduct.m */; };
+		345C84101D237A6500979061 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C840F1D237A6500979061 /* BaseModel.m */; };
+		345C84131D237BD400979061 /* Brand.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84121D237BD400979061 /* Brand.m */; };
+		345C84161D237BF200979061 /* ProductMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84151D237BF200979061 /* ProductMetadata.m */; };
+		345C84191D237C0B00979061 /* Seller.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84181D237C0B00979061 /* Seller.m */; };
+		345C841C1D237C2100979061 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C841B1D237C2100979061 /* User.m */; };
+		345C841F1D237C3C00979061 /* UserInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C841E1D237C3C00979061 /* UserInstagram.m */; };
+		345C842C1D240C1A00979061 /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84241D240C1A00979061 /* RNCryptor.m */; };
+		345C842D1D240C1A00979061 /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84271D240C1A00979061 /* RNCryptorEngine.m */; };
+		345C842E1D240C1A00979061 /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84291D240C1A00979061 /* RNDecryptor.m */; };
+		345C842F1D240C1A00979061 /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C842B1D240C1A00979061 /* RNEncryptor.m */; };
+		345C84341D24279500979061 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84331D24279500979061 /* ConversationViewController.m */; };
+		345C84411D244D4300979061 /* SendMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C843F1D244D4300979061 /* SendMessageTableViewCell.m */; };
+		345C84421D244D4300979061 /* SendMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345C84401D244D4300979061 /* SendMessageTableViewCell.xib */; };
+		345C84461D244D6300979061 /* ReceiveMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84441D244D6300979061 /* ReceiveMessageTableViewCell.m */; };
+		345C84471D244D6300979061 /* ReceiveMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345C84451D244D6300979061 /* ReceiveMessageTableViewCell.xib */; };
+		345C844F1D255D3600979061 /* SingleChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C844E1D255D3600979061 /* SingleChatModel.m */; };
+		345C84561D25BF1F00979061 /* chatGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C84551D25BF1F00979061 /* chatGroupModel.m */; };
+		345C845C1D25CAB000979061 /* chatUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C845B1D25CAB000979061 /* chatUser.m */; };
+		345C845F1D25E9C600979061 /* messageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 345C845E1D25E9C600979061 /* messageModel.m */; };
+		345C84611D262BDF00979061 /* emptyProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 345C84601D262BDF00979061 /* emptyProfile.png */; };
 		C31908C5DBD4792C9516510F /* libPods-FountDirect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F559ACA8D50858B48A95B19A /* libPods-FountDirect.a */; };
 		DA2AF82BD3B0AE8C2A178589 /* libPods-FountDirectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF79B361C8EB59588432A942 /* libPods-FountDirectTests.a */; };
 /* End PBXBuildFile section */
@@ -72,6 +125,97 @@
 		345C83431D21C1ED00979061 /* chats.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = chats.storyboard; sourceTree = "<group>"; };
 		345C83491D21DAAF00979061 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		345C834A1D21DAB300979061 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		345C838B1D23360C00979061 /* NSAttributedString+StringStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+StringStyles.h"; sourceTree = "<group>"; };
+		345C838C1D23360C00979061 /* NSAttributedString+StringStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+StringStyles.m"; sourceTree = "<group>"; };
+		345C838F1D23367D00979061 /* SingleChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChatTableViewCell.h; sourceTree = "<group>"; };
+		345C83901D23367D00979061 /* SingleChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChatTableViewCell.m; sourceTree = "<group>"; };
+		345C83911D23367D00979061 /* SingleChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleChatTableViewCell.xib; sourceTree = "<group>"; };
+		345C839E1D233D9300979061 /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Bold.otf"; sourceTree = "<group>"; };
+		345C839F1D233D9300979061 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
+		345C83A01D233D9300979061 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
+		345C83A11D233D9300979061 /* SF-UI-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Semibold.otf"; sourceTree = "<group>"; };
+		345C83A91D23683500979061 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
+		345C83AB1D2368FC00979061 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		345C83AC1D23690000979061 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		345C83B11D23696900979061 /* NSString+EmailValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EmailValidation.h"; sourceTree = "<group>"; };
+		345C83B21D23696900979061 /* NSString+EmailValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EmailValidation.m"; sourceTree = "<group>"; };
+		345C83B41D23699F00979061 /* EHFAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHFAuthenticator.h; sourceTree = "<group>"; };
+		345C83B51D23699F00979061 /* EHFAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHFAuthenticator.m; sourceTree = "<group>"; };
+		345C83B71D2369CF00979061 /* resetPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = resetPassword.storyboard; sourceTree = "<group>"; };
+		345C83B81D2369CF00979061 /* resetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resetPasswordViewController.h; sourceTree = "<group>"; };
+		345C83B91D2369CF00979061 /* resetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resetPasswordViewController.m; sourceTree = "<group>"; };
+		345C83D61D236EA400979061 /* ServiceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceLayer.h; sourceTree = "<group>"; };
+		345C83D71D236EA400979061 /* ServiceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceLayer.m; sourceTree = "<group>"; };
+		345C83DB1D23771E00979061 /* ShoppingCart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
+		345C83DD1D23775500979061 /* ShoppingCartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartTableViewController.h; sourceTree = "<group>"; };
+		345C83DE1D23775500979061 /* ShoppingCartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartTableViewController.m; sourceTree = "<group>"; };
+		345C83E01D23777800979061 /* CheckOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckOutView.h; sourceTree = "<group>"; };
+		345C83E11D23777800979061 /* CheckOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckOutView.m; sourceTree = "<group>"; };
+		345C83E41D23779600979061 /* ShopMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopMainCell.h; sourceTree = "<group>"; };
+		345C83E51D23779600979061 /* ShopMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopMainCell.m; sourceTree = "<group>"; };
+		345C83E71D2377A900979061 /* ShopCartHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartHeaderCell.h; sourceTree = "<group>"; };
+		345C83E81D2377A900979061 /* ShopCartHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartHeaderCell.m; sourceTree = "<group>"; };
+		345C83EA1D2377BB00979061 /* ShopCartFooterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartFooterCell.h; sourceTree = "<group>"; };
+		345C83EB1D2377BB00979061 /* ShopCartFooterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartFooterCell.m; sourceTree = "<group>"; };
+		345C83ED1D2377F300979061 /* EmptyShoppingCartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyShoppingCartTableViewCell.h; sourceTree = "<group>"; };
+		345C83EE1D2377F300979061 /* EmptyShoppingCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyShoppingCartTableViewCell.m; sourceTree = "<group>"; };
+		345C83F01D23781F00979061 /* round-fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-fill.png"; sourceTree = "<group>"; };
+		345C83F11D23781F00979061 /* round-fill1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-fill1x.png"; sourceTree = "<group>"; };
+		345C83F21D23781F00979061 /* round-stoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-stoke.png"; sourceTree = "<group>"; };
+		345C83F31D23781F00979061 /* round-stoke1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-stoke1x.png"; sourceTree = "<group>"; };
+		345C83F81D23782E00979061 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		345C83FA1D23783600979061 /* package.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = package.png; sourceTree = "<group>"; };
+		345C83FC1D23785F00979061 /* ShopCartProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartProductModel.h; sourceTree = "<group>"; };
+		345C83FD1D23785F00979061 /* ShopCartProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartProductModel.m; sourceTree = "<group>"; };
+		345C83FF1D2378F700979061 /* CartProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartProductModel.h; sourceTree = "<group>"; };
+		345C84001D2378F700979061 /* CartProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartProductModel.m; sourceTree = "<group>"; };
+		345C84021D23792D00979061 /* CartProductMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartProductMetaData.h; sourceTree = "<group>"; };
+		345C84031D23792D00979061 /* CartProductMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartProductMetaData.m; sourceTree = "<group>"; };
+		345C84051D2379C600979061 /* UIView+CustomStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CustomStyles.h"; sourceTree = "<group>"; };
+		345C84061D2379C600979061 /* UIView+CustomStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CustomStyles.m"; sourceTree = "<group>"; };
+		345C84081D237A2900979061 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		345C84091D237A2900979061 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		345C840B1D237A5000979061 /* ShoppingCartProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartProduct.h; sourceTree = "<group>"; };
+		345C840C1D237A5000979061 /* ShoppingCartProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartProduct.m; sourceTree = "<group>"; };
+		345C840E1D237A6500979061 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		345C840F1D237A6500979061 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		345C84111D237BD400979061 /* Brand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brand.h; sourceTree = "<group>"; };
+		345C84121D237BD400979061 /* Brand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brand.m; sourceTree = "<group>"; };
+		345C84141D237BF200979061 /* ProductMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductMetadata.h; sourceTree = "<group>"; };
+		345C84151D237BF200979061 /* ProductMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductMetadata.m; sourceTree = "<group>"; };
+		345C84171D237C0B00979061 /* Seller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seller.h; sourceTree = "<group>"; };
+		345C84181D237C0B00979061 /* Seller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seller.m; sourceTree = "<group>"; };
+		345C841A1D237C2100979061 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		345C841B1D237C2100979061 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		345C841D1D237C3C00979061 /* UserInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInstagram.h; sourceTree = "<group>"; };
+		345C841E1D237C3C00979061 /* UserInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInstagram.m; sourceTree = "<group>"; };
+		345C84221D240C1A00979061 /* RNCryptor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RNCryptor-Prefix.pch"; path = "RNCryptor/RNCryptor-Prefix.pch"; sourceTree = "<group>"; };
+		345C84231D240C1A00979061 /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNCryptor.h; path = RNCryptor/RNCryptor.h; sourceTree = "<group>"; };
+		345C84241D240C1A00979061 /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNCryptor.m; path = RNCryptor/RNCryptor.m; sourceTree = "<group>"; };
+		345C84251D240C1A00979061 /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RNCryptor+Private.h"; path = "RNCryptor/RNCryptor+Private.h"; sourceTree = "<group>"; };
+		345C84261D240C1A00979061 /* RNCryptorEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNCryptorEngine.h; path = RNCryptor/RNCryptorEngine.h; sourceTree = "<group>"; };
+		345C84271D240C1A00979061 /* RNCryptorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNCryptorEngine.m; path = RNCryptor/RNCryptorEngine.m; sourceTree = "<group>"; };
+		345C84281D240C1A00979061 /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNDecryptor.h; path = RNCryptor/RNDecryptor.h; sourceTree = "<group>"; };
+		345C84291D240C1A00979061 /* RNDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNDecryptor.m; path = RNCryptor/RNDecryptor.m; sourceTree = "<group>"; };
+		345C842A1D240C1A00979061 /* RNEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNEncryptor.h; path = RNCryptor/RNEncryptor.h; sourceTree = "<group>"; };
+		345C842B1D240C1A00979061 /* RNEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNEncryptor.m; path = RNCryptor/RNEncryptor.m; sourceTree = "<group>"; };
+		345C84321D24279500979061 /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
+		345C84331D24279500979061 /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
+		345C843E1D244D4300979061 /* SendMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageTableViewCell.h; sourceTree = "<group>"; };
+		345C843F1D244D4300979061 /* SendMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageTableViewCell.m; sourceTree = "<group>"; };
+		345C84401D244D4300979061 /* SendMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageTableViewCell.xib; sourceTree = "<group>"; };
+		345C84431D244D6300979061 /* ReceiveMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveMessageTableViewCell.h; sourceTree = "<group>"; };
+		345C84441D244D6300979061 /* ReceiveMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveMessageTableViewCell.m; sourceTree = "<group>"; };
+		345C84451D244D6300979061 /* ReceiveMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiveMessageTableViewCell.xib; sourceTree = "<group>"; };
+		345C844D1D255D3600979061 /* SingleChatModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChatModel.h; sourceTree = "<group>"; };
+		345C844E1D255D3600979061 /* SingleChatModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChatModel.m; sourceTree = "<group>"; };
+		345C84541D25BF1F00979061 /* chatGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatGroupModel.h; sourceTree = "<group>"; };
+		345C84551D25BF1F00979061 /* chatGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatGroupModel.m; sourceTree = "<group>"; };
+		345C845A1D25CAB000979061 /* chatUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatUser.h; sourceTree = "<group>"; };
+		345C845B1D25CAB000979061 /* chatUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatUser.m; sourceTree = "<group>"; };
+		345C845D1D25E9C600979061 /* messageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messageModel.h; sourceTree = "<group>"; };
+		345C845E1D25E9C600979061 /* messageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messageModel.m; sourceTree = "<group>"; };
+		345C84601D262BDF00979061 /* emptyProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyProfile.png; sourceTree = "<group>"; };
 		35C158387EDCD9922F3F0E1B /* Pods-FountDirect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FountDirect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FountDirect/Pods-FountDirect.debug.xcconfig"; sourceTree = "<group>"; };
 		462095752E86D56679E29281 /* Pods-FountDirectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FountDirectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FountDirectTests/Pods-FountDirectTests.release.xcconfig"; sourceTree = "<group>"; };
 		5204A96C9443F93995BA5731 /* Pods-FountDirectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FountDirectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FountDirectTests/Pods-FountDirectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +267,7 @@
 			children = (
 				345C82F11D2173CB00979061 /* FountDirect */,
 				345C83471D21DA3A00979061 /* ServiceLayer */,
+				345C83BC1D236A6600979061 /* Third Party Library */,
 				345C830B1D2173CB00979061 /* FountDirectTests */,
 				345C83161D2173CB00979061 /* FountDirectUITests */,
 				345C82F01D2173CB00979061 /* Products */,
@@ -149,7 +294,10 @@
 				345C82F21D2173CB00979061 /* Supporting Files */,
 				345C832C1D2180A000979061 /* Constants.h */,
 				345C83481D21DA8600979061 /* Categories */,
+				345C83A81D2367AF00979061 /* Register Flow */,
 				345C832D1D21817E00979061 /* Main Flow */,
+				345C83D91D23768000979061 /* Chechout Flow */,
+				345C83CC1D236DCF00979061 /* Models */,
 			);
 			path = FountDirect;
 			sourceTree = "<group>";
@@ -157,6 +305,7 @@
 		345C82F21D2173CB00979061 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				345C83991D2338EB00979061 /* SanFrancisco Font */,
 				345C82F31D2173CB00979061 /* main.m */,
 				345C83031D2173CB00979061 /* Info.plist */,
 			);
@@ -218,6 +367,10 @@
 				345C833A1D21B4E700979061 /* ChatsViewController.h */,
 				345C833B1D21B4E700979061 /* ChatsViewController.m */,
 				345C83431D21C1ED00979061 /* chats.storyboard */,
+				345C84321D24279500979061 /* ConversationViewController.h */,
+				345C84331D24279500979061 /* ConversationViewController.m */,
+				345C84601D262BDF00979061 /* emptyProfile.png */,
+				345C838E1D23364300979061 /* Cells */,
 			);
 			name = Chats;
 			sourceTree = "<group>";
@@ -245,6 +398,8 @@
 		345C83471D21DA3A00979061 /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				345C83D61D236EA400979061 /* ServiceLayer.h */,
+				345C83D71D236EA400979061 /* ServiceLayer.m */,
 			);
 			name = ServiceLayer;
 			path = FountDirect;
@@ -255,8 +410,177 @@
 			children = (
 				345C83491D21DAAF00979061 /* UIColor+CustomColors.h */,
 				345C834A1D21DAB300979061 /* UIColor+CustomColors.m */,
+				345C838B1D23360C00979061 /* NSAttributedString+StringStyles.h */,
+				345C838C1D23360C00979061 /* NSAttributedString+StringStyles.m */,
+				345C83B11D23696900979061 /* NSString+EmailValidation.h */,
+				345C83B21D23696900979061 /* NSString+EmailValidation.m */,
+				345C84051D2379C600979061 /* UIView+CustomStyles.h */,
+				345C84061D2379C600979061 /* UIView+CustomStyles.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		345C838E1D23364300979061 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				345C838F1D23367D00979061 /* SingleChatTableViewCell.h */,
+				345C83901D23367D00979061 /* SingleChatTableViewCell.m */,
+				345C83911D23367D00979061 /* SingleChatTableViewCell.xib */,
+				345C843E1D244D4300979061 /* SendMessageTableViewCell.h */,
+				345C843F1D244D4300979061 /* SendMessageTableViewCell.m */,
+				345C84401D244D4300979061 /* SendMessageTableViewCell.xib */,
+				345C84431D244D6300979061 /* ReceiveMessageTableViewCell.h */,
+				345C84441D244D6300979061 /* ReceiveMessageTableViewCell.m */,
+				345C84451D244D6300979061 /* ReceiveMessageTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		345C83991D2338EB00979061 /* SanFrancisco Font */ = {
+			isa = PBXGroup;
+			children = (
+				345C839E1D233D9300979061 /* SF-UI-Text-Bold.otf */,
+				345C839F1D233D9300979061 /* SF-UI-Text-Light.otf */,
+				345C83A01D233D9300979061 /* SF-UI-Text-Regular.otf */,
+				345C83A11D233D9300979061 /* SF-UI-Text-Semibold.otf */,
+			);
+			name = "SanFrancisco Font";
+			sourceTree = "<group>";
+		};
+		345C83A81D2367AF00979061 /* Register Flow */ = {
+			isa = PBXGroup;
+			children = (
+				345C83A91D23683500979061 /* Landing.storyboard */,
+				345C83AB1D2368FC00979061 /* LoginViewController.h */,
+				345C83AC1D23690000979061 /* LoginViewController.m */,
+				345C83B41D23699F00979061 /* EHFAuthenticator.h */,
+				345C83B51D23699F00979061 /* EHFAuthenticator.m */,
+				345C83B71D2369CF00979061 /* resetPassword.storyboard */,
+				345C83B81D2369CF00979061 /* resetPasswordViewController.h */,
+				345C83B91D2369CF00979061 /* resetPasswordViewController.m */,
+			);
+			name = "Register Flow";
+			sourceTree = "<group>";
+		};
+		345C83BC1D236A6600979061 /* Third Party Library */ = {
+			isa = PBXGroup;
+			children = (
+				345C83BD1D236A8100979061 /* RNCryptor */,
+			);
+			name = "Third Party Library";
+			path = FountDirect;
+			sourceTree = "<group>";
+		};
+		345C83BD1D236A8100979061 /* RNCryptor */ = {
+			isa = PBXGroup;
+			children = (
+				345C84221D240C1A00979061 /* RNCryptor-Prefix.pch */,
+				345C84231D240C1A00979061 /* RNCryptor.h */,
+				345C84241D240C1A00979061 /* RNCryptor.m */,
+				345C84251D240C1A00979061 /* RNCryptor+Private.h */,
+				345C84261D240C1A00979061 /* RNCryptorEngine.h */,
+				345C84271D240C1A00979061 /* RNCryptorEngine.m */,
+				345C84281D240C1A00979061 /* RNDecryptor.h */,
+				345C84291D240C1A00979061 /* RNDecryptor.m */,
+				345C842A1D240C1A00979061 /* RNEncryptor.h */,
+				345C842B1D240C1A00979061 /* RNEncryptor.m */,
+			);
+			name = RNCryptor;
+			sourceTree = "<group>";
+		};
+		345C83CC1D236DCF00979061 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				345C84531D25BCF800979061 /* Other Models */,
+				345C84501D25656E00979061 /* Chat Models */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		345C83D91D23768000979061 /* Chechout Flow */ = {
+			isa = PBXGroup;
+			children = (
+				345C83DA1D2376C500979061 /* Shopping Cart */,
+			);
+			name = "Chechout Flow";
+			sourceTree = "<group>";
+		};
+		345C83DA1D2376C500979061 /* Shopping Cart */ = {
+			isa = PBXGroup;
+			children = (
+				345C83DB1D23771E00979061 /* ShoppingCart.storyboard */,
+				345C83DD1D23775500979061 /* ShoppingCartTableViewController.h */,
+				345C83DE1D23775500979061 /* ShoppingCartTableViewController.m */,
+				345C83E31D23778000979061 /* Cells */,
+			);
+			name = "Shopping Cart";
+			sourceTree = "<group>";
+		};
+		345C83E31D23778000979061 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				345C83E01D23777800979061 /* CheckOutView.h */,
+				345C83E11D23777800979061 /* CheckOutView.m */,
+				345C83E41D23779600979061 /* ShopMainCell.h */,
+				345C83E51D23779600979061 /* ShopMainCell.m */,
+				345C83E71D2377A900979061 /* ShopCartHeaderCell.h */,
+				345C83E81D2377A900979061 /* ShopCartHeaderCell.m */,
+				345C83EA1D2377BB00979061 /* ShopCartFooterCell.h */,
+				345C83EB1D2377BB00979061 /* ShopCartFooterCell.m */,
+				345C83ED1D2377F300979061 /* EmptyShoppingCartTableViewCell.h */,
+				345C83EE1D2377F300979061 /* EmptyShoppingCartTableViewCell.m */,
+				345C83F01D23781F00979061 /* round-fill.png */,
+				345C83F11D23781F00979061 /* round-fill1x.png */,
+				345C83F21D23781F00979061 /* round-stoke.png */,
+				345C83F31D23781F00979061 /* round-stoke1x.png */,
+				345C83F81D23782E00979061 /* back.png */,
+				345C83FA1D23783600979061 /* package.png */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		345C84501D25656E00979061 /* Chat Models */ = {
+			isa = PBXGroup;
+			children = (
+				345C844D1D255D3600979061 /* SingleChatModel.h */,
+				345C844E1D255D3600979061 /* SingleChatModel.m */,
+				345C84541D25BF1F00979061 /* chatGroupModel.h */,
+				345C84551D25BF1F00979061 /* chatGroupModel.m */,
+				345C845A1D25CAB000979061 /* chatUser.h */,
+				345C845B1D25CAB000979061 /* chatUser.m */,
+				345C845D1D25E9C600979061 /* messageModel.h */,
+				345C845E1D25E9C600979061 /* messageModel.m */,
+			);
+			name = "Chat Models";
+			sourceTree = "<group>";
+		};
+		345C84531D25BCF800979061 /* Other Models */ = {
+			isa = PBXGroup;
+			children = (
+				345C841D1D237C3C00979061 /* UserInstagram.h */,
+				345C841E1D237C3C00979061 /* UserInstagram.m */,
+				345C841A1D237C2100979061 /* User.h */,
+				345C841B1D237C2100979061 /* User.m */,
+				345C84171D237C0B00979061 /* Seller.h */,
+				345C84181D237C0B00979061 /* Seller.m */,
+				345C84141D237BF200979061 /* ProductMetadata.h */,
+				345C84151D237BF200979061 /* ProductMetadata.m */,
+				345C84111D237BD400979061 /* Brand.h */,
+				345C84121D237BD400979061 /* Brand.m */,
+				345C840B1D237A5000979061 /* ShoppingCartProduct.h */,
+				345C840C1D237A5000979061 /* ShoppingCartProduct.m */,
+				345C83FF1D2378F700979061 /* CartProductModel.h */,
+				345C84001D2378F700979061 /* CartProductModel.m */,
+				345C83FC1D23785F00979061 /* ShopCartProductModel.h */,
+				345C83FD1D23785F00979061 /* ShopCartProductModel.m */,
+				345C84021D23792D00979061 /* CartProductMetaData.h */,
+				345C84031D23792D00979061 /* CartProductMetaData.m */,
+				345C84081D237A2900979061 /* Product.h */,
+				345C84091D237A2900979061 /* Product.m */,
+				345C840E1D237A6500979061 /* BaseModel.h */,
+				345C840F1D237A6500979061 /* BaseModel.m */,
+			);
+			name = "Other Models";
 			sourceTree = "<group>";
 		};
 		B013D378148EF9C6BD3A87A5 /* Frameworks */ = {
@@ -342,6 +666,7 @@
 				TargetAttributes = {
 					345C82EE1D2173CB00979061 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 36A3RLFK7C;
 					};
 					345C83071D2173CB00979061 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -379,9 +704,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				345C83021D2173CB00979061 /* LaunchScreen.storyboard in Resources */,
+				345C83931D23367D00979061 /* SingleChatTableViewCell.xib in Resources */,
+				345C83FB1D23783600979061 /* package.png in Resources */,
+				345C83DC1D23771E00979061 /* ShoppingCart.storyboard in Resources */,
 				345C832A1D217FC400979061 /* GoogleService-Info.plist in Resources */,
+				345C83F71D23781F00979061 /* round-stoke1x.png in Resources */,
+				345C83BA1D2369CF00979061 /* resetPassword.storyboard in Resources */,
+				345C83AA1D23683500979061 /* Landing.storyboard in Resources */,
+				345C83A21D233DBE00979061 /* SF-UI-Text-Bold.otf in Resources */,
+				345C84421D244D4300979061 /* SendMessageTableViewCell.xib in Resources */,
+				345C83A31D233DC000979061 /* SF-UI-Text-Light.otf in Resources */,
+				345C83F51D23781F00979061 /* round-fill1x.png in Resources */,
+				345C83F41D23781F00979061 /* round-fill.png in Resources */,
+				345C83A41D233DC300979061 /* SF-UI-Text-Regular.otf in Resources */,
+				345C83F91D23782E00979061 /* back.png in Resources */,
+				345C84471D244D6300979061 /* ReceiveMessageTableViewCell.xib in Resources */,
+				345C84611D262BDF00979061 /* emptyProfile.png in Resources */,
+				345C83A51D233DC600979061 /* SF-UI-Text-Semibold.otf in Resources */,
 				345C82FF1D2173CB00979061 /* Assets.xcassets in Resources */,
 				345C83351D21834200979061 /* contacts.storyboard in Resources */,
+				345C83F61D23781F00979061 /* round-stoke.png in Resources */,
 				345C83441D21C1ED00979061 /* chats.storyboard in Resources */,
 				345C83371D21834C00979061 /* me.storyboard in Resources */,
 			);
@@ -515,12 +857,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				345C83421D21B51500979061 /* MeViewController.m in Sources */,
+				345C83D81D236EA400979061 /* ServiceLayer.m in Sources */,
+				345C83E61D23779600979061 /* ShopMainCell.m in Sources */,
 				345C83301D21820600979061 /* MainTabBarViewController.m in Sources */,
+				345C84161D237BF200979061 /* ProductMetadata.m in Sources */,
+				345C84011D2378F700979061 /* CartProductModel.m in Sources */,
+				345C84461D244D6300979061 /* ReceiveMessageTableViewCell.m in Sources */,
+				345C842F1D240C1A00979061 /* RNEncryptor.m in Sources */,
+				345C840A1D237A2900979061 /* Product.m in Sources */,
+				345C84411D244D4300979061 /* SendMessageTableViewCell.m in Sources */,
+				345C83DF1D23775500979061 /* ShoppingCartTableViewController.m in Sources */,
 				345C82F71D2173CB00979061 /* AppDelegate.m in Sources */,
+				345C84131D237BD400979061 /* Brand.m in Sources */,
 				345C833F1D21B50600979061 /* ContactsViewController.m in Sources */,
+				345C83FE1D23785F00979061 /* ShopCartProductModel.m in Sources */,
+				345C83E91D2377A900979061 /* ShopCartHeaderCell.m in Sources */,
 				345C833C1D21B4E700979061 /* ChatsViewController.m in Sources */,
+				345C841C1D237C2100979061 /* User.m in Sources */,
 				345C82F41D2173CB00979061 /* main.m in Sources */,
+				345C838D1D23360C00979061 /* NSAttributedString+StringStyles.m in Sources */,
+				345C84041D23792D00979061 /* CartProductMetaData.m in Sources */,
+				345C845F1D25E9C600979061 /* messageModel.m in Sources */,
+				345C83EF1D2377F300979061 /* EmptyShoppingCartTableViewCell.m in Sources */,
+				345C83B61D23699F00979061 /* EHFAuthenticator.m in Sources */,
+				345C84561D25BF1F00979061 /* chatGroupModel.m in Sources */,
+				345C844F1D255D3600979061 /* SingleChatModel.m in Sources */,
+				345C84341D24279500979061 /* ConversationViewController.m in Sources */,
+				345C842C1D240C1A00979061 /* RNCryptor.m in Sources */,
+				345C84071D2379C600979061 /* UIView+CustomStyles.m in Sources */,
+				345C84101D237A6500979061 /* BaseModel.m in Sources */,
+				345C842D1D240C1A00979061 /* RNCryptorEngine.m in Sources */,
+				345C845C1D25CAB000979061 /* chatUser.m in Sources */,
+				345C83921D23367D00979061 /* SingleChatTableViewCell.m in Sources */,
+				345C83AD1D23690000979061 /* LoginViewController.m in Sources */,
+				345C841F1D237C3C00979061 /* UserInstagram.m in Sources */,
+				345C84191D237C0B00979061 /* Seller.m in Sources */,
+				345C840D1D237A5000979061 /* ShoppingCartProduct.m in Sources */,
+				345C842E1D240C1A00979061 /* RNDecryptor.m in Sources */,
+				345C83EC1D2377BB00979061 /* ShopCartFooterCell.m in Sources */,
 				345C834B1D21DAB300979061 /* UIColor+CustomColors.m in Sources */,
+				345C83BB1D2369CF00979061 /* resetPasswordViewController.m in Sources */,
+				345C83E21D23777800979061 /* CheckOutView.m in Sources */,
+				345C83B31D23696900979061 /* NSString+EmailValidation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +1032,7 @@
 			baseConfigurationReference = 35C158387EDCD9922F3F0E1B /* Pods-FountDirect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FountDirect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -667,6 +1046,7 @@
 			baseConfigurationReference = ACEAE7C5D7C5BB10CBE9C749 /* Pods-FountDirect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FountDirect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sendMessageCell" rowHeight="130" id="KGk-i7-Jjw" customClass="SendMessageTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jC-bE-uL7">
+                        <rect key="frame" x="35" y="8" width="270" height="113.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg6-oP-xf6">
+                                <rect key="frame" x="8" y="8" width="254" height="97.5"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2901960784" green="0.75294117650000003" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Eg6-oP-xf6" secondAttribute="bottom" constant="8" id="7VH-HB-mOx"/>
+                            <constraint firstAttribute="width" constant="270" id="OeH-Fe-f3f"/>
+                            <constraint firstAttribute="height" constant="114" id="TRH-2f-XnV"/>
+                            <constraint firstAttribute="trailing" secondItem="Eg6-oP-xf6" secondAttribute="trailing" constant="8" id="cty-O6-BVl"/>
+                            <constraint firstItem="Eg6-oP-xf6" firstAttribute="top" secondItem="3jC-bE-uL7" secondAttribute="top" constant="8" id="jHg-gs-GiT"/>
+                            <constraint firstItem="Eg6-oP-xf6" firstAttribute="leading" secondItem="3jC-bE-uL7" secondAttribute="leading" constant="8" id="m2a-Zo-sww"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TRH-2f-XnV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="3jC-bE-uL7" secondAttribute="bottom" constant="8" id="96f-dc-5yV"/>
+                    <constraint firstAttribute="bottom" secondItem="3jC-bE-uL7" secondAttribute="bottom" constant="8" id="L2V-eD-50O"/>
+                    <constraint firstItem="3jC-bE-uL7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="S68-Sf-jcl"/>
+                    <constraint firstItem="3jC-bE-uL7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="fC5-4Y-44g"/>
+                    <constraint firstAttribute="trailing" secondItem="3jC-bE-uL7" secondAttribute="trailing" constant="15" id="wUP-No-7Fu"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="96f-dc-5yV"/>
+                        <exclude reference="S68-Sf-jcl"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="SendMessageViewWidthConstarint" destination="OeH-Fe-f3f" id="zmX-66-naa"/>
+                <outlet property="messageLabel" destination="Eg6-oP-xf6" id="I8y-fj-puP"/>
+                <outlet property="messageView" destination="3jC-bE-uL7" id="V0B-hg-bdY"/>
+            </connections>
+            <point key="canvasLocation" x="357" y="361"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -3,7 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-UI-Text-Semibold.otf">
+            <string>SFUIText-Semibold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="9ve-7y-Mpt">
@@ -33,24 +39,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7O6-4d-IQY">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7O6-4d-IQY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7O6-4d-IQY" firstAttribute="leading" secondItem="f68-XD-iTs" secondAttribute="leading" id="ICI-hI-var"/>
-                            <constraint firstItem="mX3-d9-XRF" firstAttribute="top" secondItem="7O6-4d-IQY" secondAttribute="bottom" id="MF6-6N-bie"/>
-                            <constraint firstItem="7O6-4d-IQY" firstAttribute="top" secondItem="pGc-hb-nHG" secondAttribute="bottom" id="NXD-WG-u8f"/>
-                            <constraint firstAttribute="trailing" secondItem="7O6-4d-IQY" secondAttribute="trailing" id="klJ-kD-Kri"/>
+                            <constraint firstItem="7O6-4d-IQY" firstAttribute="top" secondItem="f68-XD-iTs" secondAttribute="top" id="EN8-Uf-cQq"/>
+                            <constraint firstAttribute="trailing" secondItem="7O6-4d-IQY" secondAttribute="trailing" id="RaP-r0-lHN"/>
+                            <constraint firstItem="mX3-d9-XRF" firstAttribute="top" secondItem="7O6-4d-IQY" secondAttribute="bottom" id="grM-xh-vab"/>
+                            <constraint firstItem="7O6-4d-IQY" firstAttribute="leading" secondItem="f68-XD-iTs" secondAttribute="leading" id="xjG-9u-W8d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wzh-2g-6GB"/>
+                    <connections>
+                        <outlet property="tableView" destination="7O6-4d-IQY" id="hht-hQ-lmJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GR2-J6-Uyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-266" y="28"/>
+        </scene>
+        <!--Conversation View Controller-->
+        <scene sceneID="tet-Gf-r1m">
+            <objects>
+                <viewController storyboardIdentifier="conversationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ifP-jp-0z1" customClass="ConversationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dt5-Q5-aCI"/>
+                        <viewControllerLayoutGuide type="bottom" id="jaf-hD-Icn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lwl-Dx-hhA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3G2-jq-vz1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRm-Rf-Qkw">
+                                <rect key="frame" x="63" y="550" width="474" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="THP-2F-kfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-ld-nRe">
+                                <rect key="frame" x="8" y="547" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="nbe-p9-Tom"/>
+                                    <constraint firstAttribute="width" secondItem="pgB-ld-nRe" secondAttribute="height" multiplier="1:1" id="oLj-OV-BO4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="15"/>
+                                <color key="tintColor" red="0.2901960784" green="0.75294117650000003" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="MORE">
+                                    <color key="titleColor" red="0.2901960784" green="0.75294117650000003" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgd-IS-tF2">
+                                <rect key="frame" x="547" y="547" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qgd-IS-tF2" secondAttribute="height" multiplier="1:1" id="2Ic-kB-Irp"/>
+                                    <constraint firstAttribute="width" constant="45" id="SoL-GW-8nK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="15"/>
+                                <state key="normal" title="SEND">
+                                    <color key="titleColor" red="0.2901960784" green="0.75294117650000003" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonClicked:" destination="ifP-jp-0z1" eventType="touchUpInside" id="3ep-rT-EBI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pgB-ld-nRe" firstAttribute="leading" secondItem="Lwl-Dx-hhA" secondAttribute="leading" constant="8" id="2DX-1O-vR9"/>
+                            <constraint firstAttribute="trailing" secondItem="qgd-IS-tF2" secondAttribute="trailing" constant="8" id="8jO-Ir-fHD"/>
+                            <constraint firstItem="pgB-ld-nRe" firstAttribute="centerY" secondItem="BRm-Rf-Qkw" secondAttribute="centerY" id="CTC-pA-4g3"/>
+                            <constraint firstItem="BRm-Rf-Qkw" firstAttribute="leading" secondItem="pgB-ld-nRe" secondAttribute="trailing" constant="10" id="J0O-AY-LND"/>
+                            <constraint firstItem="BRm-Rf-Qkw" firstAttribute="top" secondItem="3G2-jq-vz1" secondAttribute="bottom" id="QKs-di-yab"/>
+                            <constraint firstItem="jaf-hD-Icn" firstAttribute="top" secondItem="BRm-Rf-Qkw" secondAttribute="bottom" constant="10" id="UUg-B3-Pve"/>
+                            <constraint firstItem="qgd-IS-tF2" firstAttribute="centerY" secondItem="BRm-Rf-Qkw" secondAttribute="centerY" id="YTu-qa-gh3"/>
+                            <constraint firstItem="3G2-jq-vz1" firstAttribute="leading" secondItem="Lwl-Dx-hhA" secondAttribute="leading" id="ncz-3R-1ux"/>
+                            <constraint firstItem="3G2-jq-vz1" firstAttribute="top" secondItem="Lwl-Dx-hhA" secondAttribute="top" id="pKE-wS-t2k"/>
+                            <constraint firstAttribute="trailing" secondItem="3G2-jq-vz1" secondAttribute="trailing" id="rkV-Ei-Rxo"/>
+                            <constraint firstItem="qgd-IS-tF2" firstAttribute="leading" secondItem="BRm-Rf-Qkw" secondAttribute="trailing" constant="10" id="rsu-EK-PiM"/>
+                            <constraint firstItem="jaf-hD-Icn" firstAttribute="top" secondItem="3G2-jq-vz1" secondAttribute="bottom" constant="60" id="xKd-k2-Use"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xKd-k2-Use"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextView" destination="BRm-Rf-Qkw" id="8k4-74-Ubf"/>
+                        <outlet property="messageTextViewHeightConstraint" destination="THP-2F-kfc" id="mzh-GX-rBZ"/>
+                        <outlet property="sendButton" destination="qgd-IS-tF2" id="sBa-ox-2NN"/>
+                        <outlet property="tableView" destination="3G2-jq-vz1" id="Ftp-vo-AqN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiV-Dd-flq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-629" y="729"/>
         </scene>
     </scenes>
 </document>
