@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCollectionViewCellRI" id="gTV-IL-0wX" customClass="ProductCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="118" height="240"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="118" height="240"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fSV-Na-7Fu">
+                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fSV-Na-7Fu" secondAttribute="height" multiplier="1:1" id="78v-Dh-ss9"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nrh-rP-njW">
+                        <rect key="frame" x="85" y="8" width="25" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="QOs-pK-yaq"/>
+                            <constraint firstAttribute="width" constant="25" id="uXN-v3-04C"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name/ Long Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3v-CP-8p7">
+                        <rect key="frame" x="4" y="132" width="110" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="y4c-Dq-M3a"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qf-bb-kmk">
+                        <rect key="frame" x="4" y="174" width="110" height="14"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zs-Ub-Pkx" userLabel="Brand Label">
+                        <rect key="frame" x="4" y="118" width="110" height="14"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1a5-Fq-RKS">
+                        <rect key="frame" x="98" y="98" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="Dsd-UK-pzo"/>
+                            <constraint firstAttribute="width" secondItem="1a5-Fq-RKS" secondAttribute="height" multiplier="1:1" id="bTG-it-Knm"/>
+                        </constraints>
+                        <state key="normal" image="deletebutton"/>
+                        <connections>
+                            <action selector="deleteButtonClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="aLy-S4-L2z"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPg-EG-9we">
+                        <rect key="frame" x="4" y="160" width="110" height="14"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKp-jc-OFl" userLabel="line Label">
+                        <rect key="frame" x="20" y="193" width="78" height="1"/>
+                        <color key="backgroundColor" white="0.8466796875" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="EVy-Da-qgW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn 3,150 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZP-FM-T2K">
+                        <rect key="frame" x="4" y="199" width="110" height="14"/>
+                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="12"/>
+                        <color key="textColor" red="0.95686274509803915" green="0.72156862745098038" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="g3v-CP-8p7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="4aT-Tm-I9L"/>
+                <constraint firstAttribute="trailing" secondItem="mPg-EG-9we" secondAttribute="trailing" constant="4" id="51v-8d-ZCT"/>
+                <constraint firstItem="fSV-Na-7Fu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6wZ-eB-rD0"/>
+                <constraint firstAttribute="trailing" secondItem="iZP-FM-T2K" secondAttribute="trailing" constant="4" id="7XC-va-gWo"/>
+                <constraint firstItem="iZP-FM-T2K" firstAttribute="top" secondItem="fSV-Na-7Fu" secondAttribute="bottom" constant="81" id="8XM-jy-qwc"/>
+                <constraint firstAttribute="trailing" secondItem="nrh-rP-njW" secondAttribute="trailing" constant="8" id="8h7-Uh-O88"/>
+                <constraint firstItem="g3v-CP-8p7" firstAttribute="top" secondItem="2Zs-Ub-Pkx" secondAttribute="bottom" id="BFu-XT-Owh"/>
+                <constraint firstItem="iZP-FM-T2K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="FyY-Ae-KU2"/>
+                <constraint firstItem="1a5-Fq-RKS" firstAttribute="leading" secondItem="fSV-Na-7Fu" secondAttribute="trailing" constant="-20" id="KnY-Mi-q1H"/>
+                <constraint firstItem="5qf-bb-kmk" firstAttribute="top" secondItem="mPg-EG-9we" secondAttribute="bottom" id="PKU-e3-WQu"/>
+                <constraint firstItem="1a5-Fq-RKS" firstAttribute="top" secondItem="fSV-Na-7Fu" secondAttribute="bottom" constant="-20" id="SGU-zj-bqU"/>
+                <constraint firstAttribute="trailing" secondItem="g3v-CP-8p7" secondAttribute="trailing" constant="4" id="V5M-hf-erc"/>
+                <constraint firstItem="mPg-EG-9we" firstAttribute="top" secondItem="g3v-CP-8p7" secondAttribute="bottom" id="V5o-WS-t6c"/>
+                <constraint firstItem="nrh-rP-njW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="WTS-76-kYY"/>
+                <constraint firstItem="mPg-EG-9we" firstAttribute="top" secondItem="g3v-CP-8p7" secondAttribute="bottom" id="XoE-Eh-8NQ"/>
+                <constraint firstItem="oKp-jc-OFl" firstAttribute="top" secondItem="5qf-bb-kmk" secondAttribute="bottom" constant="5" id="arT-vi-nmg"/>
+                <constraint firstAttribute="trailing" secondItem="fSV-Na-7Fu" secondAttribute="trailing" id="ats-d0-7ae"/>
+                <constraint firstItem="mPg-EG-9we" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="awB-fw-Mwk"/>
+                <constraint firstItem="oKp-jc-OFl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="cMx-gv-EPq"/>
+                <constraint firstAttribute="trailing" secondItem="oKp-jc-OFl" secondAttribute="trailing" constant="20" id="cmW-VE-5Nr"/>
+                <constraint firstItem="fSV-Na-7Fu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="e8I-fI-cMI"/>
+                <constraint firstItem="2Zs-Ub-Pkx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="foa-Mk-KcG"/>
+                <constraint firstItem="5qf-bb-kmk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="maa-qc-13o"/>
+                <constraint firstItem="5qf-bb-kmk" firstAttribute="top" secondItem="mPg-EG-9we" secondAttribute="bottom" id="nS0-8k-3SC"/>
+                <constraint firstItem="iZP-FM-T2K" firstAttribute="top" secondItem="oKp-jc-OFl" secondAttribute="bottom" constant="5" id="nwD-PF-lDd"/>
+                <constraint firstAttribute="trailing" secondItem="2Zs-Ub-Pkx" secondAttribute="trailing" constant="4" id="rv1-BV-Bln"/>
+                <constraint firstItem="5qf-bb-kmk" firstAttribute="top" secondItem="mPg-EG-9we" secondAttribute="bottom" id="vzF-Rz-wpB"/>
+                <constraint firstAttribute="trailing" secondItem="5qf-bb-kmk" secondAttribute="trailing" constant="4" id="xSx-lK-Yx9"/>
+                <constraint firstItem="2Zs-Ub-Pkx" firstAttribute="top" secondItem="fSV-Na-7Fu" secondAttribute="bottom" id="zG1-tc-w4i"/>
+            </constraints>
+            <size key="customSize" width="118" height="240"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="XoE-Eh-8NQ"/>
+                    <exclude reference="vzF-Rz-wpB"/>
+                    <exclude reference="nwD-PF-lDd"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="brandLabel" destination="2Zs-Ub-Pkx" id="Qnx-Vr-WKh"/>
+                <outlet property="checkBoxImageView" destination="nrh-rP-njW" id="ZyY-pR-HDE"/>
+                <outlet property="deleteButton" destination="1a5-Fq-RKS" id="GcV-iA-w7J"/>
+                <outlet property="lineLable" destination="oKp-jc-OFl" id="HUU-AR-pW4"/>
+                <outlet property="mainImageView" destination="fSV-Na-7Fu" id="gXq-Tt-lQ4"/>
+                <outlet property="pointsLabel" destination="iZP-FM-T2K" id="shW-nx-l1v"/>
+                <outlet property="priceLabel" destination="mPg-EG-9we" id="rcX-Vx-QVC"/>
+                <outlet property="productNameLabel" destination="g3v-CP-8p7" id="qub-R8-xPI"/>
+                <outlet property="salePriceLabel" destination="5qf-bb-kmk" id="Uei-XZ-g78"/>
+            </connections>
+            <point key="canvasLocation" x="236" y="416"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="deletebutton" width="25" height="25"/>
+    </resources>
+</document>

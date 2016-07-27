@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="likesPeopleCell" id="KGk-i7-Jjw" customClass="likesPeopleTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bqb-GU-HGz">
+                        <rect key="frame" x="8" y="4" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="JTi-p0-8ZK"/>
+                            <constraint firstAttribute="width" secondItem="Bqb-GU-HGz" secondAttribute="height" multiplier="1:1" id="ksJ-eF-88v"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7G-56-vhq">
+                        <rect key="frame" x="53" y="4" width="178" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="178" id="Upg-u0-rHd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Upg-u0-rHd"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKn-lm-jSW">
+                        <rect key="frame" x="55" y="27" width="168" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="bCX-FP-cd3"/>
+                            <constraint firstAttribute="width" constant="168" id="bsP-Rr-Ie6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8z-U6-Kor">
+                        <rect key="frame" x="239" y="10" width="2" height="30"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="M34-5J-rLk"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4g-TT-vcz">
+                        <rect key="frame" x="249" y="9" width="65" height="30"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Y4g-TT-vcz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1uv-CW-R2E"/>
+                    <constraint firstItem="Y4g-TT-vcz" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="2" id="3H9-zX-GbF"/>
+                    <constraint firstItem="Bqb-GU-HGz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="8eb-pU-hhU"/>
+                    <constraint firstItem="Y4g-TT-vcz" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="9:7" constant="1.9999999999999929" id="8hQ-Td-hlz"/>
+                    <constraint firstItem="Bqb-GU-HGz" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="BR5-KD-T2z"/>
+                    <constraint firstItem="Y4g-TT-vcz" firstAttribute="centerY" secondItem="Bqb-GU-HGz" secondAttribute="centerY" id="Dh9-F8-V6I"/>
+                    <constraint firstItem="v7G-56-vhq" firstAttribute="leading" secondItem="Bqb-GU-HGz" secondAttribute="trailing" constant="5" id="Fs6-hh-JpB"/>
+                    <constraint firstItem="o8z-U6-Kor" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="Wbi-vt-vxQ"/>
+                    <constraint firstItem="wKn-lm-jSW" firstAttribute="top" secondItem="v7G-56-vhq" secondAttribute="bottom" constant="2" id="WpD-lB-OPC"/>
+                    <constraint firstItem="wKn-lm-jSW" firstAttribute="leading" secondItem="v7G-56-vhq" secondAttribute="leading" constant="2" id="XAJ-y1-4iG"/>
+                    <constraint firstItem="o8z-U6-Kor" firstAttribute="leading" secondItem="v7G-56-vhq" secondAttribute="trailing" constant="8" id="Y6J-9S-2kF"/>
+                    <constraint firstItem="o8z-U6-Kor" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZSg-6N-rTu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wKn-lm-jSW" secondAttribute="bottom" constant="-6" id="l8a-Jv-2Nb"/>
+                    <constraint firstItem="Y4g-TT-vcz" firstAttribute="leading" secondItem="o8z-U6-Kor" secondAttribute="trailing" constant="8" symbolic="YES" id="lT4-jr-xWd"/>
+                    <constraint firstItem="Bqb-GU-HGz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mi6-jW-kPB"/>
+                    <constraint firstItem="v7G-56-vhq" firstAttribute="top" secondItem="Bqb-GU-HGz" secondAttribute="top" id="syV-h1-rwd"/>
+                    <constraint firstItem="Bqb-GU-HGz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="xab-u6-QDw"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="BR5-KD-T2z"/>
+                        <exclude reference="xab-u6-QDw"/>
+                        <exclude reference="Dh9-F8-V6I"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="detailUserLabel" destination="wKn-lm-jSW" id="Auk-Yz-gVj"/>
+                <outlet property="followButton" destination="Y4g-TT-vcz" id="2p3-7O-zj0"/>
+                <outlet property="likedUserName" destination="v7G-56-vhq" id="glM-LE-tTp"/>
+                <outlet property="lineView" destination="o8z-U6-Kor" id="W3d-pc-Igh"/>
+                <outlet property="profileImage" destination="Bqb-GU-HGz" id="8bm-3e-gcq"/>
+            </connections>
+            <point key="canvasLocation" x="315" y="205"/>
+        </tableViewCell>
+    </objects>
+</document>

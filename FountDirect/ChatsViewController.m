@@ -16,6 +16,7 @@
 #import "ConversationViewController.h"
 #import "SingleChatModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "DirectMessageServiceLayer.h"
 
 @interface ChatsViewController (){
     UIButton *shoppingCartButton;
@@ -24,6 +25,7 @@
     NSInteger userId;
     BOOL isEndOfLoading;
     UIActivityIndicatorView *activityIndicator;
+    BOOL isReceivedMessage;
 }
 
 @end
@@ -34,22 +36,30 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self setupNavigationBar];
+    
+    //Remove tab bar Badge
+    [self.tabBarController.tabBar.items objectAtIndex:0].badgeValue = nil;
+    //Remove application badge
+    //[[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    
     pageNumber = 1;
     arrayofChatGroups = [NSMutableArray new];
     [activityIndicator startAnimating];
     self.tableView.userInteractionEnabled = NO;
     [self getApiResponse];
-
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appOpenPushReceived:) name:kPushAppActiveNotificationName object:nil];
+    
     userId = [[[ServiceLayer alloc]init]getUserId];
-//    arrayofChatGroups = [NSMutableArray new];
-//    pageNumber = 1;
+    //    arrayofChatGroups = [NSMutableArray new];
+    //    pageNumber = 1;
     self.tabBarController.tabBar.tintColor = [UIColor themeColor];
-    [self setupNavigationBar];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -65,6 +75,7 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
         activityIndicator.tag = 12; //The tag to identify view objects
         [self.tableView addSubview:activityIndicator];  //Addsubview:Spinner
     }
+    
 }
 
 #pragma mark - Setup Methods
@@ -84,7 +95,7 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
 
 -(void)setupShoppingCart{
     UILabel *lbl = [[UILabel alloc] init];
-    lbl.font = [UIFont fontWithName:@"SFUIText-Regular" size:12.0f];
+    lbl.font = [UIFont fontWithName:@"GillSans" size:15.0f];
     lbl.textColor = [UIColor themeColor];
     lbl.textAlignment = NSTextAlignmentCenter;
     
@@ -94,12 +105,13 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
     [lbl sizeToFit];
     
     shoppingCartButton =  [UIButton buttonWithType:UIButtonTypeCustom];
-    shoppingCartButton.frame = CGRectMake(0,0, 35, 35);
+    shoppingCartButton.frame = CGRectMake(0,0, 30, 30);
     shoppingCartButton.tintColor = [UIColor themeColor];
-    [shoppingCartButton setBackgroundImage:[[UIImage imageNamed:@"cart"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [shoppingCartButton setBackgroundImage:[[UIImage imageNamed:@"cart2"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     [shoppingCartButton addTarget:self action:@selector(cartClicked) forControlEvents:UIControlEventTouchUpInside];
     
-    lbl.frame = CGRectMake(shoppingCartButton.layer.position.x - 4, shoppingCartButton.layer.position.y - 4.5, 15, 10);
+    //lbl.frame = CGRectMake(shoppingCartButton.layer.position.x - 4, shoppingCartButton.layer.position.y - 4.5, 15, 10);
+    lbl.frame = CGRectMake(shoppingCartButton.bounds.origin.x + 9, shoppingCartButton.bounds.origin.y + 5, 15, 14);
     
     [shoppingCartButton addSubview:lbl];
     UIBarButtonItem *barBtn = [[UIBarButtonItem alloc] initWithCustomView:shoppingCartButton];
@@ -108,8 +120,8 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
 
 -(void)getApiResponse{
     
-    [[[ServiceLayer alloc]init]getChatMessageListWithPageNumber:pageNumber completion:^(NSArray *array) {
-       // NSLog(@"%@",array);
+    [[[DirectMessageServiceLayer alloc]init]getChatMessageListWithPageNumber:pageNumber completion:^(NSArray *array) {
+        // NSLog(@"%@",array);
         if (array.count > 0){
             for (NSDictionary *chatGroupsDictionary in array) {
                 SingleChatModel *chatModel = [[SingleChatModel alloc] initWithDictionary:chatGroupsDictionary];
@@ -125,6 +137,7 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
         [activityIndicator stopAnimating];
         self.tableView.userInteractionEnabled = YES;
     }];
+    
 }
 
 #pragma mark - UITableView Delegate & Datasource
@@ -143,9 +156,13 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     SingleChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:singleChatCellIdentifier forIndexPath:indexPath];
-    SingleChatModel *singleChat = arrayofChatGroups[indexPath.row];
+    SingleChatModel *singleChat;
     
-    if ([singleChat.chatGroupModel.type isEqualToString:@"ONETOONE"]) {
+    if (arrayofChatGroups.count>0) {
+        singleChat = arrayofChatGroups[indexPath.row];
+    }
+    
+    if ([singleChat.chatGroupModel.type isEqualToString:@"ONETOONE"]) { //OneToOne
         
         cell.profileImageView2.hidden = YES;
         NSArray *anotherUserArray;
@@ -163,7 +180,7 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
         }];
         cell.dataLabel.text = singleChat.messageTimePassed;
         
-    }else{
+    }else{ //OneToMany
         
         cell.profileImageView2.hidden = NO;
         NSMutableArray *usersArray = [[NSMutableArray alloc]init];
@@ -187,6 +204,13 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
         cell.dataLabel.text = singleChat.messageTimePassed;
     }
     
+    if (singleChat.numOfUnreadMsgInGroup == 0) {
+        cell.unreadMessageView.hidden = YES;
+    }else{
+        cell.unreadMessageView.hidden = NO;
+        cell.unreadMessageLabel.text = [NSString stringWithFormat:@"%ld",singleChat.numOfUnreadMsgInGroup];
+    }
+    
     if ([singleChat.messageType isEqualToString:@"TEXT"]) {
         cell.messageLabel.text = singleChat.messageTextContent;
     }else if ([singleChat.messageType isEqualToString:@"MEDIA"]){
@@ -194,7 +218,7 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
     }else{
         cell.messageLabel.text = @"sent you a product";
     }
-
+    
     
     if (arrayofChatGroups.count-12 == indexPath.row) {
         if (!isEndOfLoading) {
@@ -224,11 +248,24 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
     }
     
     NSMutableArray *profileImagesArray = [NSMutableArray new];
-    [profileImagesArray addObjectsFromArray:[usersArray valueForKey:@"profilePicture"]];
-     
+    
+    NSString *urlString;
+    for (int i = 0; i < usersArray.count; i++) {
+        
+        urlString = [[usersArray objectAtIndex:i]valueForKey:@"profilePicture"];
+        if (urlString.length > 0) {
+            [profileImagesArray addObject:urlString];
+        }else{
+            [profileImagesArray addObject:@"placeholderprofile"];
+        }
+    }
+    
+    //[profileImagesArray addObjectsFromArray:[usersArray valueForKey:@"profilePicture"]];
+    
     ConversationViewController *conversationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"conversationVC"];
     conversationVC.groupId = singleChat.chatGroupModel.id;
     conversationVC.profileImagesArray = profileImagesArray;
+    conversationVC.groupName = singleChat.chatGroupModel.names;
     self.navigationController.navigationBar.topItem.title = @"";
     [self.navigationController pushViewController:conversationVC animated:YES];
 }
@@ -241,12 +278,12 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
     ShoppingCartTableViewController *aCartTableView = [storyboard instantiateInitialViewController];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:aCartTableView];
     [self.navigationController presentViewController:nav animated:YES completion:nil];
-
+    
 }
 
 -(void)loadMoreDataWithPageNumber:(NSInteger)number{
     
-    [[[ServiceLayer alloc]init]getChatMessageListWithPageNumber:number completion:^(NSArray *array) {
+    [[[DirectMessageServiceLayer alloc]init]getChatMessageListWithPageNumber:number completion:^(NSArray *array) {
         
         for (NSDictionary *chatGroupsDictionary in array) {
             SingleChatModel *chatModel = [[SingleChatModel alloc] initWithDictionary:chatGroupsDictionary];
@@ -259,6 +296,27 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
             pageNumber += 1;
         }
     }];
+    
+}
+
+-(void)appOpenPushReceived:(NSNotification *)notification{
+    
+    NSDictionary *objectDictionary = [notification valueForKey:@"object"];
+    NSInteger sentFromId = [[objectDictionary valueForKey:@"SENT_FROM_ID"]integerValue];
+    NSString *notificationType = [objectDictionary valueForKey:@"NOTIFICATION_TYPE"];
+    
+    if ([notificationType isEqualToString:@"CHAT_MESSAGE_POST"] && sentFromId != userId) {
+        
+        // NSInteger numOfGroupsWithUnreadMsg = [[objectDictionary valueForKey:@"NO_OF_GROUPS_UNREAD_MSG"]integerValue];
+        //        [[NSUserDefaults standardUserDefaults] setInteger:numOfGroupsWithUnreadMsg forKey:kNumOfGroupsWithUnreadMsg];
+        
+        //Refresh and Call the API again
+        pageNumber = 1;
+        arrayofChatGroups = [NSMutableArray new];
+        [activityIndicator startAnimating];
+        self.tableView.userInteractionEnabled = NO;
+        [self getApiResponse];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -267,13 +325,13 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

@@ -24,19 +24,26 @@
 
 //#define WEB_DOMAIN @"http://10.28.166.53:9090"
 
-//#define exclusionArray @[@(1),@(2),@(3)]
-
 //#define kIsLoggedInKey  @"isLoggedInKey"
 #define kUserIdKey      @"userIdKey"
 #define kDisplayNameKey @"displayNameKey"
 #define kDeviceTokenKey @"deviceTokenKey"
 #define kEmailKey       @"emailKey"
 #define kConfirmedKey   @"confirmedKey"
+#define kUserTypeKey    @"userTypeKey"
+
+#define kUserOwnedBrandIdsKey @"userOwnedBrandIdsKey"
+
 #define kShouldDisplayBannerKey   @"shouldDisplayBannerKey"
 #define kRegisteredOpenEmailKey   @"registeredOpenEmailKey"
 #define kIsSywConnected @"isSywConnected"
 
+#define kGoToNotificationsKey @"goToNotifications"
+#define kGoToNotificationsObserver @"goToNotifications"
+
 #define kViewAllCommentsStringIdentifier @"viewAllComments"
+
+#define kNumOfGroupsWithUnreadMsg @"numOfGroupsWithUnreadMsg"
 
 #define kNumberOfItemsInCartKey @"numberOfItemsInCartKey"
 #define kSessionKey @"sessionKey"
@@ -57,6 +64,7 @@
 #define kBrandEntityName @"BrandJson"
 #define kUserEntityName @"UserJson"
 #define kSellerEntityName @"SellerEntity"
+#define kBrandUserEntityName @"BrandUser"
 
 //sortBy
 #define kSortByRelevancy    @"relevancy"
@@ -159,5 +167,22 @@
 #define kSale50Percent  @"50.0-100.0"
 #define kSale60Percent  @"60.0-100.0"
 #define kSale70Percent  @"70.0-100.0"
+
+//Comments identifiers
+#define kFromCommentButton  @"CommentButton"
+#define kFromViewAll        @"CommentViewAll"
+#define kFromComment1       @"Comment1"
+#define kFromComment2       @"Comment2"
+
+//NotificationType
+#define kNotificationTypeLikePost @"LIKE_POST"
+#define kNotificationTypeProductTaggedInMedia @"PRODUCTS_TAGGED_IN_MEDIA"
+#define kNotificationTypeProductTaggedInVT @"PRODUCTS_TAGGED_IN_VT"
+#define kNotificationTypeFollow @"FOLLOW"
+#define kNotificationTypeOrder @"ORDER"
+#define kNotificationTypeFollowRequest @"FOLLOW_REQUEST"
+#define kNotificationTypeAcceptedFollowRequest @"FOLLOW_REQUEST_ACCEPT"
+#define kNotificationTypeCommentMention @"MENTIONED_IN_COMMENT"
+#define kNotificationTypeCommentMedia @"COMMENTED_ON_MEDIA"
 
 #endif

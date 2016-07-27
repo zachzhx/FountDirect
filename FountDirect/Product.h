@@ -55,6 +55,9 @@
 
 @property (nonatomic, assign) NSUInteger shopperPoints;
 
+@property (nonatomic, strong) NSDictionary *twoTapDictionary;
+@property (nonatomic, strong) NSString *shippingOption;
+
 //@property (nonatomic, strong) NSDictionary *visualTagDataDictionary;
 //@property (nonatomic, strong) NSDictionary *productDataDictionary;
 

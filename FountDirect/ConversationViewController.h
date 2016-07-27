@@ -14,7 +14,10 @@
 @property (weak, nonatomic) IBOutlet UITextView *messageTextView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageTextViewHeightConstraint;
 @property (nonatomic, assign) NSInteger groupId;
-@property (nonatomic, strong) NSArray *profileImagesArray;
+@property (nonatomic, strong) NSMutableArray *profileImagesArray;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
+
+@property (nonatomic, strong) NSString *groupName;
+@property (nonatomic, assign) NSInteger chatReferenceId;
 
 @end

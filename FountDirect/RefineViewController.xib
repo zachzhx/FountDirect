@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RefineViewController">
+            <connections>
+                <outlet property="applyButton" destination="gjr-G2-l2b" id="xce-ZR-jGM"/>
+                <outlet property="brandsButton" destination="Imd-fE-R2K" id="kgY-ps-bQQ"/>
+                <outlet property="categoryButton" destination="0fF-bd-evi" id="Qdq-nZ-1hx"/>
+                <outlet property="checkMarkImageView" destination="T0P-WM-NHG" id="pDR-8P-7tp"/>
+                <outlet property="clearAllButton" destination="S4X-hc-jyB" id="2Vl-B5-04B"/>
+                <outlet property="priceButton" destination="3nc-ev-ky1" id="Ef6-9s-BaC"/>
+                <outlet property="saleButton" destination="345-vK-WYT" id="Ccx-BG-Vji"/>
+                <outlet property="storeButton" destination="3e1-ek-G5V" id="qOF-eX-oHL"/>
+                <outlet property="tableView" destination="rHu-3J-fLt" id="ubv-OZ-rq9"/>
+                <outlet property="topLabel" destination="L22-Sb-4Rv" id="2td-ne-Hjc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Sellers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L22-Sb-4Rv">
+                    <rect key="frame" x="205" y="74" width="395" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Rwh-s4-adS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T0P-WM-NHG">
+                    <rect key="frame" x="180" y="79" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="Rk8-fL-boF"/>
+                        <constraint firstAttribute="width" constant="15" id="tNS-VK-eqR"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3e1-ek-G5V">
+                    <rect key="frame" x="0.0" y="108" width="180" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="cLT-B9-diX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="STORE">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="storeButtonClicked:" destination="-1" eventType="touchUpInside" id="c9w-pz-PO7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fF-bd-evi">
+                    <rect key="frame" x="0.0" y="158" width="180" height="50"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="CATEGORY">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="categoryButtonClicked:" destination="-1" eventType="touchUpInside" id="hcl-Zw-QyS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imd-fE-R2K">
+                    <rect key="frame" x="0.0" y="208" width="180" height="50"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="BRANDS">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="brandsButtonClicked:" destination="-1" eventType="touchUpInside" id="UQi-1v-GeH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nc-ev-ky1">
+                    <rect key="frame" x="0.0" y="258" width="180" height="50"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="PRICE">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="priceButtonClicked:" destination="-1" eventType="touchUpInside" id="Jwx-Rm-aQl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="345-vK-WYT">
+                    <rect key="frame" x="0.0" y="308" width="180" height="50"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="SALE">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saleButtonClicked:" destination="-1" eventType="touchUpInside" id="jK1-B3-9mD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4X-hc-jyB">
+                    <rect key="frame" x="15" y="545" width="277.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="IpL-ms-bie"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                    <state key="normal" title="CLEAR ALL">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clearAllButtonClicked:" destination="-1" eventType="touchUpInside" id="fre-Qq-gDx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-G2-l2b">
+                    <rect key="frame" x="307" y="545" width="277.5" height="40"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                    <state key="normal" title="APPLY">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="applyButtonClicked:" destination="-1" eventType="touchUpInside" id="An3-y8-MBE"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rHu-3J-fLt">
+                    <rect key="frame" x="180" y="109" width="420" height="426"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="3nc-ev-ky1" firstAttribute="height" secondItem="Imd-fE-R2K" secondAttribute="height" id="2Zg-2J-9Ga"/>
+                <constraint firstItem="3nc-ev-ky1" firstAttribute="width" secondItem="345-vK-WYT" secondAttribute="width" id="6Ve-h2-iq8"/>
+                <constraint firstItem="Imd-fE-R2K" firstAttribute="top" secondItem="0fF-bd-evi" secondAttribute="bottom" id="AEu-qN-a6t"/>
+                <constraint firstItem="S4X-hc-jyB" firstAttribute="height" secondItem="gjr-G2-l2b" secondAttribute="height" id="Bfj-oJ-1dg"/>
+                <constraint firstItem="3nc-ev-ky1" firstAttribute="width" secondItem="Imd-fE-R2K" secondAttribute="width" id="FLu-gp-bdT"/>
+                <constraint firstItem="3e1-ek-G5V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FN1-0D-S2e"/>
+                <constraint firstItem="rHu-3J-fLt" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="FwA-Lk-bim"/>
+                <constraint firstItem="rHu-3J-fLt" firstAttribute="top" secondItem="L22-Sb-4Rv" secondAttribute="bottom" constant="10" id="HR3-Xc-shC"/>
+                <constraint firstItem="0fF-bd-evi" firstAttribute="top" secondItem="3e1-ek-G5V" secondAttribute="bottom" id="LR2-0F-ZBN"/>
+                <constraint firstItem="L22-Sb-4Rv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="MHF-3t-BN5"/>
+                <constraint firstItem="Imd-fE-R2K" firstAttribute="leading" secondItem="0fF-bd-evi" secondAttribute="leading" id="MoQ-uZ-EHJ"/>
+                <constraint firstAttribute="trailing" secondItem="gjr-G2-l2b" secondAttribute="trailing" constant="15" id="N0W-od-jLO"/>
+                <constraint firstItem="0fF-bd-evi" firstAttribute="height" secondItem="Imd-fE-R2K" secondAttribute="height" id="NA0-aP-QFZ"/>
+                <constraint firstItem="3e1-ek-G5V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="108" id="Oa6-Qo-8iC"/>
+                <constraint firstItem="3e1-ek-G5V" firstAttribute="width" secondItem="0fF-bd-evi" secondAttribute="width" id="P5m-8z-t0t"/>
+                <constraint firstItem="rHu-3J-fLt" firstAttribute="leading" secondItem="3e1-ek-G5V" secondAttribute="trailing" id="Pqb-3g-DrA"/>
+                <constraint firstItem="gjr-G2-l2b" firstAttribute="leading" secondItem="S4X-hc-jyB" secondAttribute="trailing" constant="15" id="Rd3-Mb-XTH"/>
+                <constraint firstItem="3nc-ev-ky1" firstAttribute="leading" secondItem="Imd-fE-R2K" secondAttribute="leading" id="Stc-nE-aWG"/>
+                <constraint firstItem="S4X-hc-jyB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="TD1-WP-hDV"/>
+                <constraint firstItem="gjr-G2-l2b" firstAttribute="top" secondItem="rHu-3J-fLt" secondAttribute="bottom" constant="10" id="Tmq-q9-H3d"/>
+                <constraint firstItem="T0P-WM-NHG" firstAttribute="centerY" secondItem="L22-Sb-4Rv" secondAttribute="centerY" id="UcA-mp-te2"/>
+                <constraint firstItem="345-vK-WYT" firstAttribute="leading" secondItem="3nc-ev-ky1" secondAttribute="leading" id="WNr-IR-CVu"/>
+                <constraint firstItem="Imd-fE-R2K" firstAttribute="width" secondItem="0fF-bd-evi" secondAttribute="width" id="Y3K-9F-rw3"/>
+                <constraint firstItem="345-vK-WYT" firstAttribute="height" secondItem="3nc-ev-ky1" secondAttribute="height" id="fDp-MG-HDg"/>
+                <constraint firstItem="gjr-G2-l2b" firstAttribute="bottom" secondItem="S4X-hc-jyB" secondAttribute="bottom" id="jim-Ci-WFV"/>
+                <constraint firstItem="T0P-WM-NHG" firstAttribute="leading" secondItem="rHu-3J-fLt" secondAttribute="leading" id="las-OS-gqi"/>
+                <constraint firstItem="345-vK-WYT" firstAttribute="top" secondItem="3nc-ev-ky1" secondAttribute="bottom" id="nkZ-pK-WA0"/>
+                <constraint firstAttribute="trailing" secondItem="L22-Sb-4Rv" secondAttribute="trailing" id="qGD-bh-V05"/>
+                <constraint firstItem="0fF-bd-evi" firstAttribute="height" secondItem="3e1-ek-G5V" secondAttribute="height" id="qkV-sw-mwS"/>
+                <constraint firstItem="3nc-ev-ky1" firstAttribute="top" secondItem="Imd-fE-R2K" secondAttribute="bottom" id="qle-J5-2Jw"/>
+                <constraint firstAttribute="trailing" secondItem="rHu-3J-fLt" secondAttribute="trailing" id="qnU-oc-W19"/>
+                <constraint firstAttribute="bottom" secondItem="S4X-hc-jyB" secondAttribute="bottom" constant="15" id="vNA-80-WbB"/>
+                <constraint firstItem="L22-Sb-4Rv" firstAttribute="leading" secondItem="T0P-WM-NHG" secondAttribute="trailing" constant="10" id="xL9-JJ-F14"/>
+                <constraint firstItem="0fF-bd-evi" firstAttribute="leading" secondItem="3e1-ek-G5V" secondAttribute="leading" id="yvl-Up-T9M"/>
+                <constraint firstItem="S4X-hc-jyB" firstAttribute="width" secondItem="gjr-G2-l2b" secondAttribute="width" id="z0t-xA-x6S"/>
+            </constraints>
+            <point key="canvasLocation" x="395" y="149"/>
+        </view>
+    </objects>
+</document>

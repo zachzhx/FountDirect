@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FilterView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-C6-ys6" userLabel="Sort by Button">
+                    <rect key="frame" x="8" y="289.5" width="55" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="iXI-VI-doy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                    <color key="tintColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title=" Sort by" image="sortby">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="sortByButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="QzX-pz-waZ"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowright" translatesAutoresizingMaskIntoConstraints="NO" id="IKO-zI-XcE" userLabel="Sortby Arrow Image View">
+                    <rect key="frame" x="68" y="294" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IKO-zI-XcE" secondAttribute="height" multiplier="1:1" id="2za-Gk-8wV"/>
+                        <constraint firstAttribute="width" constant="10" id="3yu-3j-Jcb"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowright" translatesAutoresizingMaskIntoConstraints="NO" id="E3N-kq-DGC" userLabel="Refine Arrow Image View">
+                    <rect key="frame" x="582" y="295" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="cNS-39-RJr"/>
+                        <constraint firstAttribute="width" secondItem="E3N-kq-DGC" secondAttribute="height" multiplier="1:1" id="zde-gi-yyk"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcU-m8-hX8" userLabel="Refine Button">
+                    <rect key="frame" x="522" y="290" width="55" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Sfl-9w-M5C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                    <color key="tintColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title=" Refine" image="refine">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="refineButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="ahH-gJ-mT3"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="0.0" text="0 Products" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O03-Kp-Hag" userLabel="# of Products Label">
+                    <rect key="frame" x="88" y="290" width="424" height="20"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="O03-Kp-Hag" firstAttribute="centerY" secondItem="GcU-m8-hX8" secondAttribute="centerY" id="0kX-1j-2a9"/>
+                <constraint firstItem="O03-Kp-Hag" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="420-e2-hJf"/>
+                <constraint firstItem="eTh-C6-ys6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="6Fw-Ec-WhT"/>
+                <constraint firstItem="E3N-kq-DGC" firstAttribute="leading" secondItem="GcU-m8-hX8" secondAttribute="trailing" constant="5" id="6ia-eJ-Id7"/>
+                <constraint firstItem="GcU-m8-hX8" firstAttribute="leading" secondItem="O03-Kp-Hag" secondAttribute="trailing" constant="10" id="HJb-P3-88X"/>
+                <constraint firstItem="GcU-m8-hX8" firstAttribute="centerY" secondItem="E3N-kq-DGC" secondAttribute="centerY" id="JqO-BH-23I"/>
+                <constraint firstItem="E3N-kq-DGC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="S1k-ej-axT"/>
+                <constraint firstItem="O03-Kp-Hag" firstAttribute="height" secondItem="eTh-C6-ys6" secondAttribute="height" id="WXT-e1-KaM"/>
+                <constraint firstAttribute="trailing" secondItem="E3N-kq-DGC" secondAttribute="trailing" constant="8" id="Yoj-mu-1nP"/>
+                <constraint firstItem="O03-Kp-Hag" firstAttribute="leading" secondItem="IKO-zI-XcE" secondAttribute="trailing" constant="10" id="aIF-xZ-gcp"/>
+                <constraint firstItem="IKO-zI-XcE" firstAttribute="leading" secondItem="eTh-C6-ys6" secondAttribute="trailing" constant="5" id="oqL-Wb-06D"/>
+                <constraint firstItem="IKO-zI-XcE" firstAttribute="centerY" secondItem="eTh-C6-ys6" secondAttribute="centerY" id="tDe-e8-ZRP"/>
+                <constraint firstItem="eTh-C6-ys6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vTM-Jh-1xf"/>
+            </constraints>
+            <connections>
+                <outlet property="numberOfProductsLabel" destination="O03-Kp-Hag" id="NRb-Nl-nKe"/>
+                <outlet property="refineArrowImageView" destination="E3N-kq-DGC" id="Ewi-Ky-j8Z"/>
+                <outlet property="refineButton" destination="GcU-m8-hX8" id="cCQ-Vq-rxt"/>
+                <outlet property="sortByArrowImageView" destination="IKO-zI-XcE" id="fuw-ee-nDE"/>
+                <outlet property="sortByButton" destination="eTh-C6-ys6" id="WGP-l2-iKA"/>
+            </connections>
+            <point key="canvasLocation" x="158" y="10"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowright" width="25" height="25"/>
+        <image name="refine" width="12" height="12"/>
+        <image name="sortby" width="12" height="12"/>
+    </resources>
+</document>

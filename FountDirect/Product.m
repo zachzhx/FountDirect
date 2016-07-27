@@ -16,7 +16,7 @@
     
     if (self) {
         
-//        NSLog(@"PRODU D:%@", dictionary);
+        //        NSLog(@"PRODU D:%@", dictionary);
         
         NSDictionary *brandDictionary = [dictionary objectForKey:@"brand"];
         
@@ -39,16 +39,15 @@
         self.shopperPoints      = [[dictionary objectForKey:@"shopperPoints"] integerValue];
         
         
-        
         self.inStock = [[dictionary objectForKey:@"inStock"] boolValue];
         
-//        NSLog(@"PRODUCT -- NAME:%@ -- INS:%i", self.name, self.inStock);
+        //        NSLog(@"PRODUCT -- NAME:%@ -- INS:%i", self.name, self.inStock);
         
         NSDictionary *productTaggerDictionary = [dictionary objectForKey:@"productTagger"];
         
-//        if ([self.brand.name isEqualToString:@"MANGO"] && self.productId == 1581858) {
-//            NSLog(@"PRICE:%f", self.price);
-//        }
+        //        if ([self.brand.name isEqualToString:@"MANGO"] && self.productId == 1581858) {
+        //            NSLog(@"PRICE:%f", self.price);
+        //        }
         
         if (productTaggerDictionary) {
             self.productTagger = [[User alloc] initWithDictionary:productTaggerDictionary];
@@ -70,8 +69,10 @@
         if (twoTapData) {
             NSDictionary *sitesdict = twoTapData[@"sites"];
             NSDictionary *cart_dict = [sitesdict objectForKey:[[sitesdict allKeys] objectAtIndex:0]];
+            self.shippingOption = [[cart_dict objectForKey:@"shipping_options"] valueForKey:@"cheapest"];
             NSDictionary *addToCart = cart_dict[@"add_to_cart"];
             NSDictionary *dict = [addToCart objectForKey:[[addToCart allKeys] objectAtIndex:0]];
+            self.twoTapDictionary = dict;
             self.TTOriginalPrice = [dict objectForKey:@"original_price"];
             self.TTPrice = [dict objectForKey:@"price"];
         }
