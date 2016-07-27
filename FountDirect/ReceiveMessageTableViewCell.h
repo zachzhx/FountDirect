@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *receiveMessageViewWidthConstraint;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *receiveMessageViewHeightConstraint;
+
 @end

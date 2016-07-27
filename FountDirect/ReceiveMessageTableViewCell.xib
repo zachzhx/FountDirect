@@ -51,6 +51,7 @@
                         <color key="backgroundColor" white="0.90157277960000004" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4FA-xZ-VD8" firstAttribute="top" secondItem="nxs-nR-7qi" secondAttribute="top" constant="8" id="1p7-1S-jyG"/>
+                            <constraint firstAttribute="height" constant="93.5" id="42w-LE-OQm"/>
                             <constraint firstItem="4FA-xZ-VD8" firstAttribute="leading" secondItem="nxs-nR-7qi" secondAttribute="leading" constant="8" id="WuT-gt-gMo"/>
                             <constraint firstAttribute="width" constant="240" id="keC-up-Elo"/>
                             <constraint firstAttribute="bottom" secondItem="4FA-xZ-VD8" secondAttribute="bottom" constant="8" id="oOv-oL-NKE"/>
@@ -73,6 +74,7 @@
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="1Qb-JK-Pnp"/>
+                        <exclude reference="awD-jy-9aJ"/>
                         <exclude reference="cbh-eC-sDH"/>
                     </mask>
                 </variation>
@@ -82,7 +84,8 @@
                 <outlet property="messageView" destination="nxs-nR-7qi" id="AaY-Hc-ByG"/>
                 <outlet property="nameLabel" destination="aS7-78-H5p" id="2al-8S-zkx"/>
                 <outlet property="profileImage" destination="gmV-qN-3Q2" id="9vZ-R0-8Tz"/>
-                <outlet property="receiveMessageViewWidthConstraint" destination="keC-up-Elo" id="C1F-CE-JdD"/>
+                <outlet property="receiveMessageViewHeightConstraint" destination="42w-LE-OQm" id="f6s-Ib-Gh1"/>
+                <outlet property="receiveMessageViewWidthConstraint" destination="keC-up-Elo" id="Yed-Nm-49w"/>
             </connections>
             <point key="canvasLocation" x="357" y="361"/>
         </tableViewCell>

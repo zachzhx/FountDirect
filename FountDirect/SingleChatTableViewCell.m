@@ -17,6 +17,9 @@
     self.profileImageView2.layer.cornerRadius = self.profileImageView.frame.size.width/2;
     self.profileImageView2.layer.masksToBounds = YES;
     
+    self.unreadMessageView.layer.cornerRadius = self.unreadMessageView.frame.size.width/2;
+    self.unreadMessageView.layer.masksToBounds = YES;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

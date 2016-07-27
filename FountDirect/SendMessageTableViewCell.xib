@@ -31,6 +31,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.75294117650000003" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="113.5" id="1PN-e7-Ph5"/>
                             <constraint firstAttribute="bottom" secondItem="Eg6-oP-xf6" secondAttribute="bottom" constant="8" id="7VH-HB-mOx"/>
                             <constraint firstAttribute="width" constant="270" id="OeH-Fe-f3f"/>
                             <constraint firstAttribute="height" constant="114" id="TRH-2f-XnV"/>
@@ -55,6 +56,7 @@
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="96f-dc-5yV"/>
+                        <exclude reference="L2V-eD-50O"/>
                         <exclude reference="S68-Sf-jcl"/>
                     </mask>
                 </variation>
@@ -63,6 +65,7 @@
                 <outlet property="SendMessageViewWidthConstarint" destination="OeH-Fe-f3f" id="zmX-66-naa"/>
                 <outlet property="messageLabel" destination="Eg6-oP-xf6" id="I8y-fj-puP"/>
                 <outlet property="messageView" destination="3jC-bE-uL7" id="V0B-hg-bdY"/>
+                <outlet property="sendMessageViewHeightConstraint" destination="1PN-e7-Ph5" id="Dgq-Pw-wmP"/>
             </connections>
             <point key="canvasLocation" x="357" y="361"/>
         </tableViewCell>

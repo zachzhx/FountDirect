@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dataLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView2;
+@property (weak, nonatomic) IBOutlet UIView *unreadMessageView;
+@property (weak, nonatomic) IBOutlet UILabel *unreadMessageLabel;
 
 @end

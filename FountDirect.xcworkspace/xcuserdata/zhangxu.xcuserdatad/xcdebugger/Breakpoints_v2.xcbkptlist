@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FountDirect/ChatsViewController.m"
-            timestampString = "489688697.828436"
+            timestampString = "489703237.246291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "-loadMoreDataWithPageNumber:"
             landmarkType = "5">
             <Locations>
@@ -74,12 +74,12 @@
                   moduleName = "Fount Direct"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangxu/Desktop/FountDirect/FountDirect/ChatsViewController.m"
-                  timestampString = "489696828.578991"
+                  timestampString = "489953637.641974"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "247"
-                  endingLineNumber = "247"
-                  offsetFromSymbolStart = "44">
+                  startingLineNumber = "249"
+                  endingLineNumber = "249"
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -89,12 +89,12 @@
                   moduleName = "Fount Direct"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangxu/Desktop/FountDirect/FountDirect/ChatsViewController.m"
-                  timestampString = "489696828.579102"
+                  timestampString = "489953637.642149"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "249"
-                  endingLineNumber = "249"
-                  offsetFromSymbolStart = "88">
+                  startingLineNumber = "251"
+                  endingLineNumber = "251"
+                  offsetFromSymbolStart = "93">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FountDirect/ConversationViewController.m"
-            timestampString = "489689347.95054"
+            timestampString = "489703237.246291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "489"
-            endingLineNumber = "489"
+            startingLineNumber = "490"
+            endingLineNumber = "490"
             landmarkName = "-pullToLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FountDirect/ConversationViewController.m"
-            timestampString = "489689347.95054"
+            timestampString = "489703237.246291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "491"
-            endingLineNumber = "491"
+            startingLineNumber = "492"
+            endingLineNumber = "492"
             landmarkName = "-pullToLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,12 +170,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FountDirect/ConversationViewController.m"
-            timestampString = "489696634.169132"
+            timestampString = "489703396.065822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "449"
+            endingLineNumber = "449"
+            landmarkName = "-sendButtonClicked:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FountDirect/ServiceLayer.m"
+            timestampString = "489953548.26626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
+            landmarkName = "-getConversationWithGroupId:pageNumber:completion:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

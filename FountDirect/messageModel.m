@@ -7,12 +7,39 @@
 //
 
 #import "messageModel.h"
+#import "Product.h"
 
 @implementation messageModel
+
+
+-(NSMutableArray *) arrayOfProducts {
+    if(!_arrayOfProducts){
+        _arrayOfProducts = [[NSMutableArray alloc]init];
+    }
+    return _arrayOfProducts;
+}
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary{
     self = [super init];
     if(self){
+        
+        NSArray *arrayOfProductDictionary;
+        
+        if ([[dictionary objectForKey:@"type"] isEqualToString:@"PRODUCTS"]) {
+            arrayOfProductDictionary = [dictionary valueForKey:@"products"];
+            NSDictionary *singleProductDictionary = [[arrayOfProductDictionary objectAtIndex:0]valueForKey:@"product"];
+            self.arrayOfRelevantMedias = [[arrayOfProductDictionary objectAtIndex:0]valueForKey:@"relevantMedia"];
+            Product *product = [[Product alloc] initWithDictionary:singleProductDictionary];
+            [self.arrayOfProducts addObject:product];
+        }
+        
+        if ([[dictionary objectForKey:@"type"] isEqualToString:@"MEDIA"]) {
+            arrayOfProductDictionary = [dictionary valueForKeyPath:@"media.products"];
+            for (NSDictionary *productDictionary in arrayOfProductDictionary) {
+                Product *product = [[Product alloc] initWithDictionary:productDictionary];
+                [self.arrayOfProducts addObject:product];
+            }
+        }
         
         self.type = [dictionary objectForKey:@"type"];
         self.textContent = [dictionary objectForKey:@"textContent"];
@@ -28,6 +55,25 @@
         self.fromPrivateSetting = [[dictionary valueForKeyPath:@"from.userProfile.privateSetting"]boolValue];
         self.fromFullName = [dictionary valueForKeyPath:@"from.userProfile.fullName"];
         self.fromBio = [dictionary valueForKeyPath:@"from.userProfile.bio"];
+        
+        //MEDIA
+        if ([self.type isEqualToString:@"MEDIA"]) {
+        self.mediaDictionary = [dictionary valueForKey:@"media"];
+        self.mediaCaption                = [dictionary valueForKeyPath:@"media.caption"];
+        self.mediaId                = [[dictionary valueForKeyPath:@"media.id"] integerValue];
+        self.mediaType = [dictionary valueForKeyPath:@"media.mediaType"];
+        self.mediaOwner = [[dictionary valueForKeyPath:@"media.mediaOwner"] integerValue];
+        self.mediaSource = [dictionary valueForKeyPath:@"media.mediaSource"];
+        self.mediaUploader = [[dictionary valueForKeyPath:@"media.mediaUploaded"] integerValue];
+        self.mediaTags = [dictionary valueForKeyPath:@"media.tags"];
+        self.mediaStandardResolutionWidth    = [[dictionary valueForKeyPath:@"media.standardResolutionWidth"] integerValue];
+        self.mediaStandardResolutionHeight   = [[dictionary valueForKeyPath:@"media.standardResolutionHeight"] integerValue];
+        self.mediaStandardResolutionURL      = [dictionary valueForKeyPath:@"media.standardResolutionURL"];
+        self.mediaIgUploaderProfileUrl = [dictionary valueForKeyPath:@"media.instagramUserProfileUrl"];
+        self.mediaIgUploaderName = [dictionary valueForKeyPath:@"media.instagramUserName"];
+        self.mediaFountUploaderProfileUrl = [dictionary valueForKeyPath:@"media.fountUserProfileUrl"];
+        self.mediaFountUploaderName = [dictionary valueForKeyPath:@"media.fountUserName"];
+        }
         
         //For Post Message:
 //        self.type = [dictionary valueForKeyPath:@"message.type"];

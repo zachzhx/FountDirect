@@ -4,9 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
             <string>SFUIText-Regular</string>
             <string>SFUIText-Regular</string>
         </mutableArray>
@@ -64,6 +66,26 @@
                             </mask>
                         </variation>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2C-Kb-oVD" userLabel="Unread Message View">
+                        <rect key="frame" x="44" y="4" width="20" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DKj-vf-Kq0">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="u2C-Kb-oVD" secondAttribute="height" multiplier="1:1" id="E0S-Fc-coi"/>
+                            <constraint firstAttribute="trailing" secondItem="DKj-vf-Kq0" secondAttribute="trailing" id="IuP-yz-dTw"/>
+                            <constraint firstAttribute="bottom" secondItem="DKj-vf-Kq0" secondAttribute="bottom" id="Ng1-42-off"/>
+                            <constraint firstItem="DKj-vf-Kq0" firstAttribute="leading" secondItem="u2C-Kb-oVD" secondAttribute="leading" id="kGt-Ts-PhI"/>
+                            <constraint firstItem="DKj-vf-Kq0" firstAttribute="top" secondItem="u2C-Kb-oVD" secondAttribute="top" id="rTc-hx-eeE"/>
+                            <constraint firstAttribute="width" constant="20" id="v3S-r5-gnU"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ahI-RB-DTW" firstAttribute="leading" secondItem="TMn-xb-eUW" secondAttribute="leading" id="0v1-Je-sZb"/>
@@ -73,7 +95,9 @@
                     <constraint firstItem="DjH-1P-UKv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="JoG-23-yY5"/>
                     <constraint firstItem="ahI-RB-DTW" firstAttribute="top" secondItem="TMn-xb-eUW" secondAttribute="bottom" constant="8" id="Pif-jg-qc2"/>
                     <constraint firstItem="3go-H8-4Aa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Qiu-rY-gKP"/>
+                    <constraint firstItem="3go-H8-4Aa" firstAttribute="top" secondItem="u2C-Kb-oVD" secondAttribute="bottom" constant="-9.5" id="RHX-mF-Xz9"/>
                     <constraint firstItem="TMn-xb-eUW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Sm9-l1-Zja"/>
+                    <constraint firstItem="u2C-Kb-oVD" firstAttribute="leading" secondItem="mRX-6Y-UWg" secondAttribute="trailing" constant="1" id="Vdb-sA-UIp"/>
                     <constraint firstAttribute="trailing" secondItem="ahI-RB-DTW" secondAttribute="trailing" constant="8" id="XI1-qO-lf0"/>
                     <constraint firstItem="mRX-6Y-UWg" firstAttribute="width" secondItem="mRX-6Y-UWg" secondAttribute="height" multiplier="1:1" id="ZQ5-6e-O0x"/>
                     <constraint firstAttribute="bottom" secondItem="ahI-RB-DTW" secondAttribute="bottom" constant="8.5" id="dWS-ZO-bNn"/>
@@ -82,10 +106,12 @@
                     <constraint firstItem="ahI-RB-DTW" firstAttribute="top" secondItem="DjH-1P-UKv" secondAttribute="bottom" constant="8" id="hd1-wk-Mpp"/>
                     <constraint firstItem="3go-H8-4Aa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lmd-Cw-U7J"/>
                     <constraint firstItem="DjH-1P-UKv" firstAttribute="leading" secondItem="TMn-xb-eUW" secondAttribute="trailing" constant="15" id="mbV-58-W6V"/>
+                    <constraint firstItem="u2C-Kb-oVD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="36" id="tQa-gn-NdB"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="7tL-nl-xbz"/>
+                        <exclude reference="Vdb-sA-UIp"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -95,6 +121,8 @@
                 <outlet property="nameLabel" destination="TMn-xb-eUW" id="Kud-fh-Eoi"/>
                 <outlet property="profileImageView" destination="3go-H8-4Aa" id="Umd-QP-63B"/>
                 <outlet property="profileImageView2" destination="mRX-6Y-UWg" id="1Cr-ie-3po"/>
+                <outlet property="unreadMessageLabel" destination="DKj-vf-Kq0" id="MfW-LQ-zyS"/>
+                <outlet property="unreadMessageView" destination="u2C-Kb-oVD" id="NTe-4u-AY6"/>
             </connections>
             <point key="canvasLocation" x="403.5" y="321.5"/>
         </tableViewCell>

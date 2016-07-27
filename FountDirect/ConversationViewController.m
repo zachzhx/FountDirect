@@ -370,6 +370,12 @@ static NSString *receiveMessageIdentifier = @"receiveMessageCell";
             cell.messageLabel.text = textContentString;
         }
         
+        if (textContentString.length <= 0) {
+            cell.messageView.hidden = YES;
+        }else{
+            cell.messageView.hidden = NO;
+        }
+        
         if (arrayOfMessages.count -1 == indexPath.row) {
             [self scrollToBottom];
         }
@@ -440,32 +446,27 @@ static NSString *receiveMessageIdentifier = @"receiveMessageCell";
 - (IBAction)sendButtonClicked:(UIButton *)sender {
     
     NSString *messageToPost = self.messageTextView.text;
-    
-    [[[ServiceLayer alloc]init]postConversationMessageWithChatGroupId:self.groupId messageType:@"TEXT" messageContent:messageToPost completion:^(NSDictionary *dictionary) {
-        //NSLog(@"%@",dictionary);
-        //NSLog(@"%@",arrayOfMessages);
+    if (messageToPost.length > 0) {
         
-        messageModel *messageModel1 = [[messageModel alloc]initWithDictionary:dictionary];
-        messageModel1.textContent = messageToPost;
-        messageModel1.type = @"TEXT";
-        messageModel1.isVisible = YES;
-        messageModel1.fromUserId = userId;
-        
-        [arrayOfMessages addObject:messageModel1];
-        
-//        NSIndexPath *indexPathForRow_end = [NSIndexPath indexPathForRow:arrayOfMessages.count-1 inSection:0];
-//        
-//        [self.tableView beginUpdates];
-//        
-//        [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObjects:indexPathForRow_end, nil] withRowAnimation:UITableViewRowAnimationTop];
-//        
-//        [self.tableView endUpdates];
-        [self.tableView reloadData];
-        
-        [self scrollToBottom];
-        _messageTextView.text = @"";
-        
-    }];
+        [[[ServiceLayer alloc]init]postConversationMessageWithChatGroupId:self.groupId messageType:@"TEXT" messageContent:messageToPost completion:^(NSDictionary *dictionary) {
+            //NSLog(@"%@",dictionary);
+            //NSLog(@"%@",arrayOfMessages);
+            
+            messageModel *messageModel1 = [[messageModel alloc]initWithDictionary:dictionary];
+            messageModel1.textContent = messageToPost;
+            messageModel1.type = @"TEXT";
+            messageModel1.isVisible = YES;
+            messageModel1.fromUserId = userId;
+            
+            [arrayOfMessages addObject:messageModel1];
+            
+            [self.tableView reloadData];
+            
+            [self scrollToBottom];
+            _messageTextView.text = @"";
+            
+        }];
+    }
 }
 
 -(void)pullToLoad:(id)sender{

@@ -30,6 +30,7 @@
         self.messageType = [dictionary valueForKeyPath:@"message.type"];
         self.messageTextContent = [dictionary valueForKeyPath:@"message.textContent"];
         self.messageTimePassed = [dictionary valueForKeyPath:@"message.timePassed"];
+        self.numOfUnreadMsgInGroup = [[dictionary valueForKeyPath:@"numOfUnreadMsgInGroup"]integerValue];
         
     }
     return self;

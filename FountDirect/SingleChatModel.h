@@ -24,6 +24,7 @@
 @property (nonatomic, strong) NSString *messageTextContent;
 @property (nonatomic, strong) NSString *messageTimePassed;
 @property (nonatomic, strong) NSString *messageType;
+@property (nonatomic, assign) NSInteger numOfUnreadMsgInGroup;
 
 
 @end

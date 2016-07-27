@@ -110,15 +110,17 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
     
     [[[ServiceLayer alloc]init]getChatMessageListWithPageNumber:pageNumber completion:^(NSArray *array) {
        // NSLog(@"%@",array);
-        for (NSDictionary *chatGroupsDictionary in array) {
-            SingleChatModel *chatModel = [[SingleChatModel alloc] initWithDictionary:chatGroupsDictionary];
-            [arrayofChatGroups addObject:chatModel];
-        }
-        [self.tableView reloadData];
-        if (array.count <20) {
-            isEndOfLoading = YES;
-        }else{
-            pageNumber += 1;
+        if (array.count > 0){
+            for (NSDictionary *chatGroupsDictionary in array) {
+                SingleChatModel *chatModel = [[SingleChatModel alloc] initWithDictionary:chatGroupsDictionary];
+                [arrayofChatGroups addObject:chatModel];
+            }
+            [self.tableView reloadData];
+            if (array.count <20) {
+                isEndOfLoading = YES;
+            }else{
+                pageNumber += 1;
+            }
         }
         [activityIndicator stopAnimating];
         self.tableView.userInteractionEnabled = YES;

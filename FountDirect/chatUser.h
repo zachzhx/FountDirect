@@ -20,4 +20,5 @@
 @property (nonatomic, strong) NSString *bio;
 @property (nonatomic, assign) BOOL isDeleted;
 
+@property (nonatomic, assign) NSInteger numOfUnreadMsg;
 @end

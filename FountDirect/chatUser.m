@@ -36,6 +36,7 @@
             self.privateSetting = [[dictionary valueForKeyPath:@"userProfile.privateSetting"] boolValue];
             self.fullName = [dictionary valueForKeyPath:@"userProfile.fullName"];
             self.bio = [dictionary valueForKeyPath:@"userProfile.bio"];
+            self.numOfUnreadMsg = [[dictionary valueForKey:@"numberOfUnreadMsg"]integerValue];
         }
         
     }
