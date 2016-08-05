@@ -17,6 +17,8 @@
 #import "SingleChatModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DirectMessageServiceLayer.h"
+#import <Crashlytics/Crashlytics.h>
+
 
 @interface ChatsViewController (){
     UIButton *shoppingCartButton;
@@ -54,6 +56,14 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Crashlytics
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(20, 50, 100, 30);
+    [button setTitle:@"Crash" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(crashButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appOpenPushReceived:) name:kPushAppActiveNotificationName object:nil];
     
     userId = [[[ServiceLayer alloc]init]getUserId];
@@ -76,6 +86,11 @@ static NSString *singleChatCellIdentifier = @"SingleChatCell";
         [self.tableView addSubview:activityIndicator];  //Addsubview:Spinner
     }
     
+}
+
+
+- (IBAction)crashButtonTapped:(id)sender {
+    [[Crashlytics sharedInstance] crash];
 }
 
 #pragma mark - Setup Methods

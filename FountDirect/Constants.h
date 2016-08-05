@@ -15,10 +15,10 @@
 //#define WEB_DOMAIN @"http://10.28.141.119:9090"
 //#define WEB_DOMAIN @"http://lifestyleqa.shopyourway.com/lifestyle"
 //#define WEB_DOMAIN @"http://trprsywmkapp1.intra.searshc.com:8780/lifestyle"
-//#define WEB_DOMAIN @"https://fountit.com/lifestyle"
+#define WEB_DOMAIN @"https://fountit.com/lifestyle"
 //#define WEB_DOMAIN @"https://spreest.searshc.com/lifestyle"
 //#define WEB_DOMAIN @"http://localhost:9090"
-#define WEB_DOMAIN @"https://mktgspreest.searshc.com/lifestyle"
+//#define WEB_DOMAIN @"https://mktgspreest.searshc.com/lifestyle"
 //#define WEB_DOMAIN @"trstsywlfsapp01.vm.itg.corp.us.shldcorp.com:8543/lifestyle"
 //#define WEB_DOMAIN @"https://hfqasywlfsapp01.vm.itg.corp.us.shldcorp.com:8543/lifestyle"
 

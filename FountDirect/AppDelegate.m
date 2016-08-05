@@ -31,6 +31,8 @@
 //    self.window.rootViewController = tab;
 //    [self.window makeKeyAndVisible];
     
+    [Fabric with:@[[Crashlytics class]]];
+
     self.launchedURL = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
     
     BOOL userIsActivated = [[NSUserDefaults standardUserDefaults] boolForKey:kConfirmedKey];
